@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Dossiers | ICAT Lab Chiang Mai University</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Technical dossiers of selected research and production-grade web projects by ICAT Lab, Chiang Mai University.">
+  <meta name="keywords" content="NetZero, Coral College, Smart City, Digital Twin, Web Applications, CAMT, Chiang Mai University">
+  
+  <!-- Google Fonts: Lora & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Pinned Academic Header / Navbar -->
+  <header class="journal-navbar" id="top-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="ICAT Lab Logo" id="logo-img">
+        <div class="logo-text">
+          <span class="lab-title">ICAT LAB</span>
+          <span class="lab-sub">Chiang Mai University</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="projects.html" class="nav-item active-nav-item">Our Projects</a>
+        <a href="events.html" class="nav-item">Events</a>
+        <a href="unreal.html" class="nav-item">Unreal Engine</a>
+        <a href="staff.html" class="nav-item">Faculty & Staff</a>
+      </nav>
+      <div class="journal-meta-tag">
+        <span>ICAT JOURNAL VOL. 26, NO. 1</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container styled like a Journal Paper -->
+  <main class="paper-layout" style="margin-top: calc(var(--navbar-height) + 2rem);">
+    
+    <!-- Paper Header Page Metadata -->
+    <header class="paper-header">
+      <div class="paper-category">SPECIAL ISSUE: SELECTED PROJECTS</div>
+      <h1 class="paper-title">Project Dossiers: Case Studies in Immersive Web Platforms</h1>
+      
+      <div class="paper-authors">
+        <p class="author-names">Innovative Computer & Advanced Technology Lab</p>
+        <p class="author-affiliations">Research Project Directory on Deployed Web-Based Digital Architectures</p>
+      </div>
+      
+      <hr class="paper-divider-thick">
+    </header>
+
+    <p class="subpage-intro-paragraph">
+      This dossier details production-grade web visualization systems, IoT dashboard utilities, and immersive interactive learning sites developed by Chiang Mai University. It presents the technical architecture, stack profiles, and production milestones of deployed digital projects.
+    </p>
+
+    <div class="paper-divider-double"></div>
+
+    <!-- Section I: Project Portfolio Directory -->
+    <section class="paper-section" id="portfolio-section">
+      <h2 class="section-title"><span class="section-num">I.</span> PROJECT PORTFOLIO DIRECTORY</h2>
+      
+      <p class="section-paragraph">
+        Below is a directory of production-grade simulations and interactive digital environments developed under the ICAT Game Studio initiative using Unreal Engine. Click on a published project card to inspect its engineering design document.
+      </p>
+
+      <div class="game-portfolio-grid">
+        <!-- Project 1: CMU Carbon Footprint -->
+        <article class="game-portfolio-card active-card" onclick="selectProject(0)">
+          <div class="game-card-thumbnail">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="120" fill="#f3f4f6" />
+              <path d="M20,100 L60,80 L100,90 L140,50 L180,60" fill="none" stroke="#0f3c5f" stroke-width="2"/>
+              <circle cx="20" cy="100" r="4" fill="#0f3c5f"/>
+              <circle cx="60" cy="80" r="4" fill="#0f3c5f"/>
+              <circle cx="100" cy="90" r="4" fill="#0f3c5f"/>
+              <circle cx="140" cy="50" r="4" fill="#0f3c5f"/>
+              <circle cx="180" cy="60" r="4" fill="#0f3c5f"/>
+              <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">NETZERO-CMU 3D</text>
+            </svg>
+          </div>
+          <div class="game-card-info">
+            <span class="game-card-status status-published">PUBLISHED</span>
+            <h4 class="game-card-title">CMU Carbon Footprint</h4>
+            <p class="game-card-desc">Real-time 3D Carbon Emission Dashboard for CMU.</p>
+            <span class="game-card-action">Inspect Dossier <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </article>
+
+        <!-- Project 2: Coral College -->
+        <article class="game-portfolio-card active-card" onclick="selectProject(1)">
+          <div class="game-card-thumbnail">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="120" fill="#f3f4f6" />
+              <path d="M100,100 C80,80 70,50 100,20 C130,50 120,80 100,100 Z" fill="none" stroke="#0284c7" stroke-width="2"/>
+              <path d="M70,80 Q100,60 130,80" fill="none" stroke="#0f3c5f" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">CORAL EDUCATION</text>
+            </svg>
+          </div>
+          <div class="game-card-info">
+            <span class="game-card-status status-published">PUBLISHED</span>
+            <h4 class="game-card-title">Coral College</h4>
+            <p class="game-card-desc">Coral Reef Education Platform.</p>
+            <span class="game-card-action">Inspect Dossier <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </article>
+
+        <!-- Project 3: Smart & Livable City -->
+        <article class="game-portfolio-card active-card" onclick="selectProject(2)">
+          <div class="game-card-thumbnail">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="120" fill="#f3f4f6" />
+              <rect x="30" y="50" width="30" height="50" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
+              <rect x="70" y="30" width="40" height="70" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
+              <rect x="120" y="60" width="35" height="40" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
+              <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">URBAN MAPPING</text>
+            </svg>
+          </div>
+          <div class="game-card-info">
+            <span class="game-card-status status-published">PUBLISHED</span>
+            <h4 class="game-card-title">Smart & Livable City</h4>
+            <p class="game-card-desc">Urban Data Platform for Smart City Planning.</p>
+            <span class="game-card-action">Inspect Dossier <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </article>
+
+        <!-- Placeholder 4 -->
+        <article class="game-portfolio-card disabled-card" style="background-color: #fafafa; border: 1px dashed #d1d5db; display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; min-height: 280px;">
+          <div style="color: var(--text-muted);">
+            <i class="fa-solid fa-cubes" style="font-size: 1.8rem; margin-bottom: 0.75rem; display: block; opacity: 0.5;"></i>
+            <h4 style="font-family: var(--font-serif); font-size: 0.95rem; margin-bottom: 0.25rem; font-weight: 600; color: var(--text-muted);">None</h4>
+            <p style="font-size: 0.75rem; line-height: 1.4; margin: 0; opacity: 0.7;">Pipeline Project Slot</p>
+          </div>
+        </article>
+
+        <!-- Placeholder 5 -->
+        <article class="game-portfolio-card disabled-card" style="background-color: #fafafa; border: 1px dashed #d1d5db; display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; min-height: 280px;">
+          <div style="color: var(--text-muted);">
+            <i class="fa-solid fa-cubes" style="font-size: 1.8rem; margin-bottom: 0.75rem; display: block; opacity: 0.5;"></i>
+            <h4 style="font-family: var(--font-serif); font-size: 0.95rem; margin-bottom: 0.25rem; font-weight: 600; color: var(--text-muted);">None</h4>
+            <p style="font-size: 0.75rem; line-height: 1.4; margin: 0; opacity: 0.7;">Pipeline Project Slot</p>
+          </div>
+        </article>
+
+        <!-- Placeholder 6 -->
+        <article class="game-portfolio-card disabled-card" style="background-color: #fafafa; border: 1px dashed #d1d5db; display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; min-height: 280px;">
+          <div style="color: var(--text-muted);">
+            <i class="fa-solid fa-cubes" style="font-size: 1.8rem; margin-bottom: 0.75rem; display: block; opacity: 0.5;"></i>
+            <h4 style="font-family: var(--font-serif); font-size: 0.95rem; margin-bottom: 0.25rem; font-weight: 600; color: var(--text-muted);">None</h4>
+            <p style="font-size: 0.75rem; line-height: 1.4; margin: 0; opacity: 0.7;">Pipeline Project Slot</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="paper-divider-double divider-reveal" id="feature-divider"></div>
+
+    <!-- Section II: Featured Project Analysis -->
+    <section class="paper-section details-reveal-section" id="project-details" style="position: relative;">
+      <h2 class="section-title"><span class="section-num">II.</span> DETAILED CASE ANALYSIS</h2>
+      
+      <!-- New Floating Circular Close Button -->
+      <button class="close-details-btn-round" id="close-project-details" aria-label="Close details">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="project-details-content">
+        <div class="project-details-grid">
+          <div class="project-details-text-side">
+            <span class="project-details-tag" id="detail-project-tag">01: CARBON INDEX</span>
+            <h3 class="project-details-title" id="detail-project-title">CMU Carbon Footprint</h3>
+            <p class="project-details-authors" id="detail-project-authors">ERDI-CMU, Faculty of Engineering</p>
+            
+            <div class="tech-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label"><i class="fa-solid fa-layer-group"></i> Stack:</span>
+                <span class="spec-val" id="detail-spec-tech">WebGL / Three.js / IoT API</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label"><i class="fa-solid fa-laptop-code"></i> Platform:</span>
+                <span class="spec-val" id="detail-spec-platform">Web Dashboard</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label"><i class="fa-solid fa-circle-check"></i> Status:</span>
+                <span class="spec-val spec-badge" id="detail-spec-status">Active Deployment</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label"><i class="fa-solid fa-handshake"></i> Partner:</span>
+                <span class="spec-val" id="detail-spec-collab">Faculty of Engineering</span>
+              </div>
+            </div>
+
+            <p class="project-details-abstract justify-text" id="detail-project-abstract">
+              Real-time 3D Carbon Emission Dashboard for CMU.
+            </p>
+            
+            <div class="centered-cta-container">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="visit-project-btn" id="detail-project-link">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Launch Project Platform</span>
+              </a>
+            </div>
+          </div>
+          <div class="project-details-preview-side">
+            <div class="details-window-frame">
+              <div class="window-bar">
+                <span class="window-dot red"></span>
+                <span class="window-dot yellow"></span>
+                <span class="window-dot green"></span>
+                <span class="window-title">Dossier Visualizer</span>
+              </div>
+              <div class="window-content" id="detail-project-preview">
+                <!-- SVG preview will be injected here dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="paper-divider-thick page-end-divider">
+
+  </main>
+
+  <footer class="journal-footer">
+    <div class="footer-container">
+      <div class="footer-logo-block">
+        <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 1rem;">
+          <img src="logo.png" alt="ICAT Lab Logo" class="footer-logo">
+          <div class="footer-logo-text">
+            <h4>ICAT LAB</h4>
+            <p>Innovative Computer & Advanced Technology Lab</p>
+          </div>
+        </a>
+      </div>
+      <div class="footer-nav">
+        <h5>NAVIGATION</h5>
+        <div class="footer-nav-links">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Our Projects</a>
+          <a href="events.html">Events</a>
+          <a href="unreal.html">Unreal Engine</a>
+          <a href="staff.html">Faculty & Staff</a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <h5>CONTACT</h5>
+        <p class="contact-title">College of Arts, Media, and Technology</p>
+        <p class="contact-sub">Chiang Mai University</p>
+        <p class="contact-address">
+          239 Huay Kaew Rd. Tambon Su Thep, Amphoe Mueang Chiang Mai, Chiang Mai 50200, Thailand
+        </p>
+      </div>
+      <div class="footer-social">
+        <h5>FOLLOW US</h5>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+          <span>Facebook</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2026 ICAT Research Lab. All Rights Reserved. Formatted as an Academic Journal Web Interface.</p>
+    </div>
+  </footer>
+
+  <script>
+    const PROJECTS_DATA = [
+      {
+        tag: "01: CARBON INDEX",
+        title: "CMU Carbon Footprint",
+        authors: "ERDI-CMU, Faculty of Engineering",
+        abstract: "A real-time 3D carbon emission monitoring dashboard designed for Chiang Mai University. Integrated with the IoT sensing grid and ESG metrics, it allows university planners to track net-zero targets and simulate carbon index fluctuations based on live campus operations.",
+        tech: "WebGL / Three.js / IoT API",
+        platform: "Web Dashboard",
+        status: "Active Deployment",
+        collab: "ERDI-CMU, Faculty of Engineering",
+        link: "https://netzero-cmu-phase-2.vercel.app",
+        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="120" fill="#f3f4f6" />
+                <path d="M20,100 L60,80 L100,90 L140,50 L180,60" fill="none" stroke="#0f3c5f" stroke-width="2"/>
+                <circle cx="20" cy="100" r="4" fill="#0f3c5f"/>
+                <circle cx="60" cy="80" r="4" fill="#0f3c5f"/>
+                <circle cx="100" cy="90" r="4" fill="#0f3c5f"/>
+                <circle cx="140" cy="50" r="4" fill="#0f3c5f"/>
+                <circle cx="180" cy="60" r="4" fill="#0f3c5f"/>
+                <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">NETZERO-CMU 3D</text>
+              </svg>`
+      },
+      {
+        tag: "02: MARINE BIO",
+        title: "Coral College",
+        authors: "Marine Conservation Platform",
+        abstract: "An interactive, game-based learning platform for marine biology and coral reef conservation. Built to educate school students about marine biodiversity, climate change impact, and reef recovery initiatives in Thailand, offering interactive quizzes and virtual 3D coral viewing.",
+        tech: "React / Three.js / WebGL",
+        platform: "Web Application",
+        status: "Active Production",
+        collab: "Marine Conservation Platform",
+        link: "https://coralcollegethailand.org/",
+        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="120" fill="#f3f4f6" />
+                <path d="M100,100 C80,80 70,50 100,20 C130,50 120,80 100,100 Z" fill="none" stroke="#0284c7" stroke-width="2"/>
+                <path d="M70,80 Q100,60 130,80" fill="none" stroke="#0f3c5f" stroke-width="1.5" stroke-dasharray="4 2"/>
+                <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">CORAL EDUCATION</text>
+              </svg>`
+      },
+      {
+        tag: "03: URBAN PLANNING",
+        title: "Smart & Livable City",
+        authors: "Smart City Thailand Development Group",
+        abstract: "A comprehensive urban planning visualization suite compiling real-time environmental data, noise maps, particulate matter index (PM2.5), and citizen reporting to support municipal decision-making in Northern Thailand.",
+        tech: "GIS Engine / Vue.js / Node.js",
+        platform: "Web & Spatial Platform",
+        status: "Active Deployment",
+        collab: "Smart City Thailand Group",
+        link: "https://smartlivablecityth.com/",
+        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="120" fill="#f3f4f6" />
+                <rect x="30" y="50" width="30" height="50" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
+                <rect x="70" y="30" width="40" height="70" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
+                <rect x="120" y="60" width="35" height="40" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
+                <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">URBAN MAPPING</text>
+              </svg>`
+      }
+    ];
+
+    function selectProject(idx) {
+      const data = PROJECTS_DATA[idx];
+      if (!data) return;
+
+      document.getElementById('detail-project-tag').textContent = data.tag;
+      document.getElementById('detail-project-title').textContent = data.title;
+      document.getElementById('detail-project-authors').textContent = data.authors;
+      document.getElementById('detail-project-abstract').textContent = data.abstract;
+      
+      document.getElementById('detail-spec-tech').textContent = data.tech;
+      document.getElementById('detail-spec-platform').textContent = data.platform;
+      document.getElementById('detail-spec-status').textContent = data.status;
+      document.getElementById('detail-spec-collab').textContent = data.collab;
+      
+      document.getElementById('detail-project-link').setAttribute('href', data.link);
+      document.getElementById('detail-project-preview').innerHTML = data.svg;
+
+      // Update card active states
+      const cards = document.querySelectorAll('.game-portfolio-card');
+      cards.forEach((card, i) => {
+        if (i === idx) card.classList.add('active-card');
+        else card.classList.remove('active-card');
+      });
+
+      const element = document.getElementById('project-details');
+      const divider = document.getElementById('feature-divider');
+      
+      if (element) {
+        if (divider) divider.classList.add('revealed');
+        element.classList.add('revealed');
+        
+        setTimeout(() => {
+          const offset = 90;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }, 150);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const closeBtn = document.getElementById('close-project-details');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          const element = document.getElementById('project-details');
+          const divider = document.getElementById('feature-divider');
+          if (element) element.classList.remove('revealed');
+          if (divider) divider.classList.remove('revealed');
+          
+          const portfolio = document.getElementById('portfolio-section');
+          if (portfolio) {
+            setTimeout(() => {
+              const offset = 90;
+              const portfolioPosition = portfolio.getBoundingClientRect().top;
+              const offsetPosition = portfolioPosition + window.pageYOffset - offset;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }, 50);
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

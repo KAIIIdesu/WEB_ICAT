@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICAT Research Lab | Digital Twin & Immersive Reality Case Study</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Research paper and case study on Digital Twin, XR/VR, Immersive Reality, and AI/IoT applications by ICAT Lab, Chiang Mai University.">
+  <meta name="keywords" content="Digital Twin, IoT, Immersive Reality, VR, XR, AI, Research, Chiang Mai University">
+
+  <!-- Google Fonts: Lora (for Serif academic look) & Inter (for Sans-serif modern clean layout) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons for UI elements and Social links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- Pinned Academic Header / Navbar -->
+  <header class="journal-navbar" id="top-nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="logo.png" alt="ICAT Lab Logo" id="logo-img">
+        <div class="logo-text">
+          <span class="lab-title">ICAT LAB</span>
+          <span class="lab-sub">Chiang Mai University</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item active-nav-item">Home</a>
+        <a href="projects.html" class="nav-item">Our Projects</a>
+        <a href="events.html" class="nav-item">Events</a>
+        <a href="unreal.html" class="nav-item">Unreal Engine</a>
+        <a href="staff.html" class="nav-item">Faculty & Staff</a>
+      </nav>
+      <div class="journal-meta-tag">
+        <span>ICAT JOURNAL VOL. 26, NO. 1</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section: Video Hero Banner (Opening Loop Video) -->
+  <section class="hero-video-section">
+    <div class="video-background-container">
+      <!-- YouTube Embed with loop, autoplay, mute, controls hidden -->
+      <iframe
+        src="https://www.youtube.com/embed/SGvApu3z-Dc?autoplay=1&mute=1&loop=1&playlist=SGvApu3z-Dc&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&enablejsapi=1"
+        title="ICAT Lab Loop Video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="hero-overlay">
+      <div class="hero-text-card">
+        <p class="journal-prefix">JOURNAL OF ADVANCED COMPUTING & DIGITAL SYSTEMS</p>
+        <h1 class="hero-main-title">Digital Twin & Immersive 3D Reality</h1>
+        <p class="hero-author-list">Innovative Computer & Advanced Technology Research Group</p>
+        <div class="scroll-down-hint">
+          <span>Scroll to Read Manuscript</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container styled like a Journal Paper -->
+  <main class="paper-layout">
+
+    <!-- Paper Header Page Metadata -->
+    <header class="paper-header">
+      <div class="paper-category">RESEARCH ARTICLE</div>
+      <h1 class="paper-title" id="article-title">Exploring Website: A Case Study of ICAT Digital Twin & Immersive
+        Reality</h1>
+
+      <div class="paper-authors">
+        <p class="author-names">ICAT Research Lab, Chiang Mai University</p>
+        <p class="author-affiliations">Faculty of Engineering & Multidisciplinary Research Institute, Chiang Mai
+          University, Chiang Mai, Thailand</p>
+      </div>
+
+      <!-- Thick Line Divider typical of journals -->
+      <hr class="paper-divider-thick">
+    </header>
+
+    <!-- Section I: Article Info & About Us (Abstract) -->
+    <section class="paper-section abstract-section-grid" id="about">
+
+      <!-- Article Info Column -->
+      <div class="article-info-col">
+        <h3 class="side-heading">ARTICLE INFO</h3>
+
+        <div class="info-block">
+          <span class="info-label">Keywords:</span>
+          <p class="keywords-list">
+            <span>Digital Twin</span>,
+            <span>Internet of Things (IoT)</span>,
+            <span>Data Visualization</span>,
+            <span>Immersive Reality</span>,
+            <span>Game-Based Learning</span>,
+            <span>Research</span>
+          </p>
+        </div>
+
+        <div class="info-block dates-block">
+          <p><strong>Received:</strong> May 12, 2026</p>
+          <p><strong>Accepted:</strong> June 18, 2026</p>
+          <p><strong>Published:</strong> June 26, 2026</p>
+        </div>
+      </div>
+
+      <!-- About Us / Abstract Column -->
+      <div class="about-abstract-col">
+        <h3 class="side-heading">ABOUT US</h3>
+        <p class="abstract-text">
+          A leading research laboratory dedicated to advancing and applying digital technologies to drive innovation,
+          foster interdisciplinary collaboration, and strengthen the digital ecosystem. The lab aims to enhance the
+          capabilities and competitiveness of the digital industry in Northern Thailand by supporting cutting-edge
+          research, nurturing talent, and promoting partnerships between academia, industry, and the community.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Double line divider standard in IEEE/Academic formats -->
+    <div class="paper-divider-double"></div>
+
+    <!-- Section II: Our Showcase (Event Video) -->
+    <section class="paper-section section-showcase" id="showcase">
+      <h2 class="section-title"><span class="section-num">I.</span> OUR SHOWCASE</h2>
+
+      <div class="showcase-content">
+        <p class="section-paragraph">
+          The ICAT Lab showcases high-fidelity interactive digital twin models combining real-time IoT feeds and virtual
+          spaces. Below is a video demonstration displaying our immersive interactive platforms and visualization
+          dashboards.
+        </p>
+
+        <!-- Video Container styled like a Figure in a paper -->
+        <div class="paper-figure-wrapper">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/xUAVNhBEi8I?start=48" title="ICAT Lab Showcase Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <figcaption class="figure-caption">
+            <strong>Fig. 1.</strong> Technical demonstration of the ICAT Digital Twin framework, illustrating
+            physical-to-virtual data mapping, real-time sensor visualization, and immersive VR user interfaces.
+          </figcaption>
+        </div>
+      </div>
+    </section>
+
+    <hr class="paper-divider-thin">
+
+    <!-- Section III: Core Research Areas -->
+    <section class="paper-section section-research" id="research">
+      <h2 class="section-title"><span class="section-num">II.</span> CORE RESEARCH AREAS</h2>
+
+      <p class="section-paragraph justify-text">
+        Our research activities are categorized into three primary interconnected domains. These pillars form a
+        comprehensive loop of sensing (IoT), modeling (Digital Twin), and experiencing (XR/VR).
+      </p>
+
+      <div class="research-grid">
+        <!-- Area A -->
+        <div class="research-column">
+          <div class="column-header-box">A</div>
+          <div class="research-image-wrapper">
+            <img src="DigitalTwin.png" alt="Digital Twin & Smart Systems">
+          </div>
+          <h3 class="column-title">Digital Twin & Smart Systems</h3>
+          <p class="column-text justify-text">
+            This area focuses on Digital Twin technology for smart environments, covering ESG monitoring, smart campus
+            and smart city development, and real-time data visualization. These systems create virtual representations
+            of real-world environments, enabling learners and researchers to monitor, analyze, and make data-driven
+            decisions.
+          </p>
+        </div>
+
+        <!-- Area B -->
+        <div class="research-column">
+          <div class="column-header-box">B</div>
+          <div class="research-image-wrapper">
+            <img src="XRVR.jpg" alt="XR / VR & Immersive Reality">
+          </div>
+          <h3 class="column-title">XR / VR & Immersive Reality</h3>
+          <p class="column-text justify-text">
+            This section highlights immersive technologies such as Virtual Reality (VR) and Extended Reality (XR),
+            spanning VR training and simulation, AI-Generated Content (AIGC), and games. These tools create engaging,
+            interactive experiences that enhance learner participation, improve comprehension, and make complex concepts
+            more accessible.
+          </p>
+        </div>
+
+        <!-- Area C -->
+        <div class="research-column">
+          <div class="column-header-box">C</div>
+          <div class="research-image-wrapper">
+            <img src="AInIot.jpg" alt="AI & IoT Applications">
+          </div>
+          <h3 class="column-title">AI & IoT Applications</h3>
+          <p class="column-text justify-text">
+            This component applies Artificial Intelligence and IoT to real-world problems, including AI camera
+            detection, smart healthcare, and smart monitoring systems. These solutions combine sensing, data analysis,
+            and automation to support knowledge creation, innovation, and effective decision-making.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="paper-divider-thin">
+
+    <!-- Section IV: Our Projects (Carousel Slider) -->
+    <section class="paper-section section-projects" id="projects">
+      <div class="projects-section-header">
+        <h2 class="section-title"><span class="section-num">III.</span> SELECTED PROJECTS</h2>
+      </div>
+
+      <p class="section-paragraph">
+        Selected research projects from ICAT Lab demonstrating industrial and academic application of Digital Twin
+        technology, IoT integrations, and VR training:
+      </p>
+
+      <!-- Carousel Outer Container -->
+      <div class="carousel-container-wrapper">
+        <button class="carousel-btn btn-prev" aria-label="Previous Projects" id="prev-btn">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="projects-track">
+
+            <!-- Project 1: CMU Carbon Footprint -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-tag">01: CARBON INDEX</span>
+              </div>
+              <a href="https://netzero-cmu-phase-2.vercel.app" target="_blank" rel="noopener noreferrer"
+                class="project-link-wrapper" title="Launch CMU Carbon Footprint Dashboard">
+                <div class="project-thumbnail">
+                  <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="120" fill="#f3f4f6" />
+                    <path d="M20,100 L60,80 L100,90 L140,50 L180,60" fill="none" stroke="#0f3c5f" stroke-width="2" />
+                    <circle cx="20" cy="100" r="4" fill="#0f3c5f" />
+                    <circle cx="60" cy="80" r="4" fill="#0f3c5f" />
+                    <circle cx="100" cy="90" r="4" fill="#0f3c5f" />
+                    <circle cx="140" cy="50" r="4" fill="#0f3c5f" />
+                    <circle cx="180" cy="60" r="4" fill="#0f3c5f" />
+                    <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">NETZERO-CMU
+                      3D</text>
+                  </svg>
+                </div>
+              </a>
+              <h4 class="project-title">CMU Carbon Footprint</h4>
+              <p class="project-authors">ERDI-CMU, Faculty of Engineering</p>
+              <p class="project-abstract">
+                Real-time 3D Carbon Emission Dashboard for CMU.
+              </p>
+            </article>
+
+            <!-- Project 2: Coral College -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-tag">02: MARINE BIO</span>
+              </div>
+              <a href="https://coralcollegethailand.org/" target="_blank" rel="noopener noreferrer"
+                class="project-link-wrapper" title="Open Coral College Platform">
+                <div class="project-thumbnail">
+                  <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="120" fill="#f3f4f6" />
+                    <path d="M100,100 C80,80 70,50 100,20 C130,50 120,80 100,100 Z" fill="none" stroke="#0284c7"
+                      stroke-width="2" />
+                    <path d="M70,80 Q100,60 130,80" fill="none" stroke="#0f3c5f" stroke-width="1.5"
+                      stroke-dasharray="4 2" />
+                    <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">CORAL
+                      EDUCATION</text>
+                  </svg>
+                </div>
+              </a>
+              <h4 class="project-title">Coral College</h4>
+              <p class="project-authors">Marine Conservation Platform</p>
+              <p class="project-abstract">
+                Coral Reef Education Platform.
+              </p>
+            </article>
+
+            <!-- Project 3: Smart & Livable City -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-tag">03: URBAN PLANNING</span>
+              </div>
+              <a href="https://smartlivablecityth.com/" target="_blank" rel="noopener noreferrer"
+                class="project-link-wrapper" title="Open Smart & Livable City Dashboard">
+                <div class="project-thumbnail">
+                  <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="120" fill="#f3f4f6" />
+                    <rect x="30" y="50" width="30" height="50" fill="none" stroke="#0f3c5f" stroke-width="1.5" />
+                    <rect x="70" y="30" width="40" height="70" fill="none" stroke="#0f3c5f" stroke-width="1.5" />
+                    <rect x="120" y="60" width="35" height="40" fill="none" stroke="#0f3c5f" stroke-width="1.5" />
+                    <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">URBAN
+                      MAPPING</text>
+                  </svg>
+                </div>
+              </a>
+              <h4 class="project-title">Smart & Livable City</h4>
+              <p class="project-authors">Smart City Thailand Development Group</p>
+              <p class="project-abstract">
+                Urban Data Platform for Smart City Planning.
+              </p>
+            </article>
+
+            <!-- Project 4: Visit Lamphun -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-tag">04: TOURISM MOBILE</span>
+              </div>
+              <a href="https://visit-lamphun.web.app/" target="_blank" rel="noopener noreferrer"
+                class="project-link-wrapper" title="Open Visit Lamphun Portal">
+                <div class="project-thumbnail">
+                  <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="120" fill="#f3f4f6" />
+                    <circle cx="100" cy="50" r="12" fill="none" stroke="#e11d48" stroke-width="2" />
+                    <path d="M100,62 L100,85 M85,72 L115,72" stroke="#e11d48" stroke-width="1.5" />
+                    <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">LAMPHUN
+                      GUIDE</text>
+                  </svg>
+                </div>
+              </a>
+              <h4 class="project-title">Visit Lamphun</h4>
+              <p class="project-authors">Tourism Promotion Application</p>
+              <p class="project-abstract">
+                Tourism Promotion App.
+              </p>
+            </article>
+
+            <!-- Project 5: Exerbrain CMU -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-tag">05: CLINICAL XR</span>
+              </div>
+              <a href="https://exerbrain.ams.cmu.ac.th/" target="_blank" rel="noopener noreferrer"
+                class="project-link-wrapper" title="Open Exerbrain CMU Platform">
+                <div class="project-thumbnail">
+                  <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="120" fill="#f3f4f6" />
+                    <path d="M10,60 Q50,20 100,60 T190,60" fill="none" stroke="#ef4444" stroke-width="2" />
+                    <circle cx="100" cy="60" r="15" fill="none" stroke="#0f3c5f" stroke-dasharray="4 2" />
+                    <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">STROKE
+                      REHAB</text>
+                  </svg>
+                </div>
+              </a>
+              <h4 class="project-title">Exerbrain CMU</h4>
+              <p class="project-authors">Faculty of Associated Medical Sciences</p>
+              <p class="project-abstract">
+                Support Platform for Continuous Rehabilitation in Chronic Stroke Patients.
+              </p>
+            </article>
+
+            <!-- Project 6: Botanic Garden -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-tag">06: AR SIMULATION</span>
+              </div>
+              <a href="https://bontanicgraden-phase2.web.app/" target="_blank" rel="noopener noreferrer"
+                class="project-link-wrapper" title="Open Botanic Garden AR Platform">
+                <div class="project-thumbnail">
+                  <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="120" fill="#f3f4f6" />
+                    <path d="M100,15 L125,50 L100,85 L75,50 Z" fill="none" stroke="#16a34a" stroke-width="2" />
+                    <line x1="100" y1="15" x2="100" y2="85" stroke="#16a34a" stroke-width="1.5" />
+                    <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">QUEEN
+                      SIRIKIT BOTANIC</text>
+                  </svg>
+                </div>
+              </a>
+              <h4 class="project-title">Botanic Garden</h4>
+              <p class="project-authors">Queen Sirikit Botanic Research Group</p>
+              <p class="project-abstract">
+                AR Platform for Queen Sirikit Botanic Garden.
+              </p>
+            </article>
+
+            <!-- Project 7: Muteru (มูเตลู) -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-tag">07: CULTURE TRAVEL</span>
+              </div>
+              <a href="https://camt-muteru.web.app/login" target="_blank" rel="noopener noreferrer"
+                class="project-link-wrapper" title="Open Muteru App">
+                <div class="project-thumbnail">
+                  <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="120" fill="#f3f4f6" />
+                    <circle cx="100" cy="60" r="22" fill="none" stroke="#d97706" stroke-width="1.5" />
+                    <polygon points="100,28 105,43 120,43 108,53 112,68 100,58 88,68 92,53 80,43 95,43" fill="#d97706"
+                      opacity="0.8" />
+                    <text x="15" y="20" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">FAITH
+                      TOURISM</text>
+                  </svg>
+                </div>
+              </a>
+              <h4 class="project-title">Muteru (มูเตลู)</h4>
+              <p class="project-authors">CAMT Faith & Fortune Group</p>
+              <p class="project-abstract">
+                Travel App for Faith & Fortune Tourism.
+              </p>
+            </article>
+
+            <!-- Project 8: Let's Fill CMU -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-tag">08: GAME SIMULATOR</span>
+              </div>
+              <a href="https://letfill-cmu.web.app/" target="_blank" rel="noopener noreferrer"
+                class="project-link-wrapper" title="Open Let's Fill CMU Game">
+                <div class="project-thumbnail">
+                  <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="120" fill="#f3f4f6" />
+                    <path d="M70,40 Q100,30 130,40 Q140,80 100,100 Q60,80 70,40 Z" fill="none" stroke="#0f3c5f"
+                      stroke-width="2" />
+                    <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">DENTAL
+                      TRAINER</text>
+                  </svg>
+                </div>
+              </a>
+              <h4 class="project-title">Let's Fill CMU</h4>
+              <p class="project-authors">Faculty of Dentistry, CMU</p>
+              <p class="project-abstract">
+                Dental Treatment Simulation Game.
+              </p>
+            </article>
+
+            <!-- Project 9: ICAT Digital Twin -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-tag">09: 3D DIGITAL TWIN</span>
+              </div>
+              <a href="https://icat-iot.web.app/" target="_blank" rel="noopener noreferrer" class="project-link-wrapper"
+                title="Open ICAT Digital Twin Visualizer">
+                <div class="project-thumbnail">
+                  <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="120" fill="#f3f4f6" />
+                    <ellipse cx="100" cy="60" rx="50" ry="20" fill="none" stroke="#0f3c5f" stroke-dasharray="4 2" />
+                    <rect x="75" y="45" width="50" height="30" fill="#0f3c5f" opacity="0.3" stroke="#0f3c5f"
+                      stroke-width="1" />
+                    <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">WEBGL
+                      VIEWPORT</text>
+                  </svg>
+                </div>
+              </a>
+              <h4 class="project-title">ICAT Digital Twin</h4>
+              <p class="project-authors">ICAT Research Lab Group</p>
+              <p class="project-abstract">
+                Web-Based 3D Data Visualization Platform.
+              </p>
+            </article>
+
+          </div>
+        </div>
+        <button class="carousel-btn btn-next" aria-label="Next Projects" id="next-btn">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Carousel Indicator Dots -->
+      <div class="carousel-dots" id="carousel-dots-container"></div>
+
+      <!-- Collapsible Project Details Panel -->
+      <div class="project-details-wrapper details-reveal-section" id="project-details-container"
+        style="position: relative;">
+        <!-- New Floating Circular Close Button -->
+        <button class="close-details-btn-round" id="close-project-details" aria-label="Close details">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="project-details-content">
+          <div class="project-details-grid">
+            <div class="project-details-text-side">
+              <span class="project-details-tag" id="detail-project-tag">01: CARBON INDEX</span>
+              <h3 class="project-details-title" id="detail-project-title">CMU Carbon Footprint</h3>
+              <p class="project-details-authors" id="detail-project-authors">ERDI-CMU, Faculty of Engineering</p>
+
+              <!-- New Technical Specs Grid -->
+              <div class="tech-specs-grid">
+                <div class="spec-item">
+                  <span class="spec-label"><i class="fa-solid fa-layer-group"></i> Stack:</span>
+                  <span class="spec-val" id="detail-spec-tech">WebGL / Three.js / IoT API</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label"><i class="fa-solid fa-laptop-code"></i> Platform:</span>
+                  <span class="spec-val" id="detail-spec-platform">Web Dashboard</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label"><i class="fa-solid fa-circle-check"></i> Status:</span>
+                  <span class="spec-val spec-badge" id="detail-spec-status">Active Deployment</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label"><i class="fa-solid fa-handshake"></i> Partner:</span>
+                  <span class="spec-val" id="detail-spec-collab">Faculty of Engineering</span>
+                </div>
+              </div>
+
+              <p class="project-details-abstract justify-text" id="detail-project-abstract">
+                Real-time 3D Carbon Emission Dashboard for CMU.
+              </p>
+
+              <!-- Centered CTA Link -->
+              <div class="centered-cta-container">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="visit-project-btn"
+                  id="detail-project-link">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Launch Project Platform</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Modernized Window Mockup Preview Side -->
+            <div class="project-details-preview-side">
+              <div class="details-window-frame">
+                <div class="window-bar">
+                  <span class="window-dot red"></span>
+                  <span class="window-dot yellow"></span>
+                  <span class="window-dot green"></span>
+                  <span class="window-title">Dossier Visualizer</span>
+                </div>
+                <div class="window-content" id="detail-project-preview">
+                  <!-- SVG preview injected dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="paper-divider-thin">
+
+    <!-- Section V: References / Special Thanks (Staff & Contributors) -->
+    <section class="paper-section section-thanks" id="thanks">
+      <h2 class="section-title"><span class="section-num">IV.</span> SPECIAL THANKS & CONTRIBUTORS</h2>
+      <p class="section-paragraph">
+        This work was supported by the collaborating organizations, funding bodies, and staff members of the ICAT
+        Research Group listed below in alphabetical order:
+      </p>
+
+      <!-- Styled like IEEE references -->
+      <div class="references-list">
+        <div class="ref-item">
+          <span class="ref-number">[1]</span>
+          <span class="ref-content">Energy Research and Development Institute – Nakornping, Chiang Mai
+            University.</span>
+        </div>
+        <div class="ref-item">
+          <span class="ref-number">[2]</span>
+          <span class="ref-content">Program Management Unit on Area-Based Development (PMU-A), Thailand.</span>
+        </div>
+        <div class="ref-item">
+          <span class="ref-number">[3]</span>
+          <span class="ref-content">Program Management Unit for Competitiveness Enhancement (PMU-C), Thailand.</span>
+        </div>
+        <div class="ref-item">
+          <span class="ref-number">[4]</span>
+          <span class="ref-content">Murata Electronics (Thailand) Ltd.</span>
+        </div>
+        <div class="ref-item">
+          <span class="ref-number">[5]</span>
+          <span class="ref-content">Queen Sirikit Botanic Garden.</span>
+        </div>
+        <div class="ref-item">
+          <span class="ref-number">[6]</span>
+          <span class="ref-content">Tourism Authority of Thailand, Phuket Office (TAT Phuket).</span>
+        </div>
+        <div class="ref-item">
+          <span class="ref-number">[7]</span>
+          <span class="ref-content">Energy Technology for Environment Research Center (ETE), Faculty of Engineering,
+            Chiang Mai University.</span>
+        </div>
+        <div class="ref-item">
+          <span class="ref-number">[8]</span>
+          <span class="ref-content">Asst. Prof. Pattaraporn Khuwuthyakorn.</span>
+        </div>
+        <div class="ref-item">
+          <span class="ref-number">[9]</span>
+          <span class="ref-content">Dr. Korawan Sangkakorn, Multidisciplinary Research Institute, Chiang Mai
+            University.</span>
+        </div>
+        <div class="ref-item">
+          <span class="ref-number">[10]</span>
+          <span class="ref-content">Asst. Prof. Watcharaphong Ariyakriangkai.</span>
+        </div>
+        <div class="ref-item">
+          <span class="ref-number">[11]</span>
+          <span class="ref-content">Asst. Prof. Teerawat Kamnardsiri.</span>
+        </div>
+        <div class="ref-item">
+          <span class="ref-number">[12]</span>
+          <span class="ref-content">Tiwarin Lerdwerasirikul, DDS.</span>
+        </div>
+        <div class="ref-item">
+          <span class="ref-number">[13]</span>
+          <span class="ref-content">Napaphat Lekgamheng, Researcher.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thick bottom line indicating the end of the manuscript -->
+    <hr class="paper-divider-thick page-end-divider">
+
+  </main>
+
+  <!-- Section VI: Footer section containing Logo, Navbar duplications, and Follow Links -->
+  <footer class="journal-footer">
+    <div class="footer-container">
+
+      <!-- Logo Block -->
+      <div class="footer-logo-block">
+        <img src="logo.png" alt="ICAT Lab Logo" class="footer-logo">
+        <div class="footer-logo-text">
+          <h4>ICAT LAB</h4>
+          <p>Innovative Computer & Advanced Technology Lab</p>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-nav">
+        <h5>NAVIGATION</h5>
+        <div class="footer-nav-links">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Our Projects</a>
+          <a href="events.html">Events</a>
+          <a href="unreal.html">Unreal Engine</a>
+          <a href="staff.html">Faculty & Staff</a>
+        </div>
+      </div>
+
+      <!-- Contact Block -->
+      <div class="footer-contact">
+        <h5>CONTACT</h5>
+        <p class="contact-title">College of Arts, Media, and Technology</p>
+        <p class="contact-sub">Chiang Mai University</p>
+        <p class="contact-address">
+          239 Huay Kaew Rd. Tambon Su Thep, Amphoe Mueang Chiang Mai, Chiang Mai 50200, Thailand
+        </p>
+      </div>
+
+      <!-- Social Media Block -->
+      <div class="footer-social">
+        <h5>FOLLOW US</h5>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+          aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+          <span>Facebook</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Copyright details styled like standard publisher metadata -->
+    <div class="footer-copyright">
+      <p>&copy; 2026 ICAT Research Lab. All Rights Reserved. Formatted as an Academic Journal Web Interface.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Live Telemetry HUD (Pitch Feature) -->
+  <!-- Scripts -->
+  <script src="index.js"></script>
+</body>
+
+</html>

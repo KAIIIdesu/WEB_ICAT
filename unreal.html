@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unreal Engine Projects | ICAT Lab Chiang Mai University</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Technical dossier of Unreal Engine game projects, featuring student-led developments like Whisper of Anima by CAMT, Chiang Mai University.">
+  <meta name="keywords" content="Unreal Engine, Whisper of Anima, Game Development, CAMT, Chiang Mai University, Steam Game, Student Project">
+  
+  <!-- Google Fonts: Lora (for Serif academic look) & Inter (for Sans-serif modern clean layout) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for UI elements and Social links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="index.css">
+  
+  <style>
+    /* Subpage specific styles to highlight active state and game pitching */
+    .active-nav-item {
+      color: var(--academic-blue) !important;
+      font-weight: 700 !important;
+    }
+    .active-nav-item::after {
+      width: 100% !important;
+    }
+    
+    /* 1. Split-Screen Hero Banner */
+    .game-hero-banner {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+      background: linear-gradient(135deg, #0f2b48 0%, #031326 100%);
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      border-radius: 6px;
+      padding: 2.5rem;
+      color: #ffffff;
+      margin: 2.5rem 0;
+      box-shadow: 0 15px 40px rgba(3, 19, 38, 0.2);
+    }
+    
+    .game-hero-video-side {
+      flex: 1.25;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    
+    .game-hero-video-side iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    
+    .game-hero-content-side {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .game-tag-badge {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #00d2ff;
+      background-color: rgba(0, 210, 255, 0.1);
+      padding: 0.35rem 0.75rem;
+      border-radius: 4px;
+      border: 1px solid rgba(0, 210, 255, 0.25);
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    
+    .game-hero-title {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    
+    .game-hero-subtitle {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    
+    .game-hero-abstract {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1.75rem;
+      text-align: justify;
+    }
+    
+    .steam-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      background: linear-gradient(90deg, #171a21 0%, #2a475e 100%);
+      border: 1px solid #66c0f4;
+      color: #ffffff;
+      padding: 0.9rem 1.8rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      align-self: flex-start;
+    }
+    
+    .steam-cta-btn:hover {
+      background: linear-gradient(90deg, #2a475e 0%, #66c0f4 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(102, 192, 244, 0.3);
+    }
+    
+    .steam-cta-btn i {
+      font-size: 1.3rem;
+    }
+    
+    .subpage-intro-paragraph {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      line-height: 1.7;
+      text-align: justify;
+      color: var(--text-primary);
+      margin-bottom: 2rem;
+    }
+    
+    /* 2. Game Portfolio Grid */
+    .game-portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin: 1.5rem 0 2.5rem 0;
+    }
+    
+    .game-portfolio-card {
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      background-color: var(--bg-primary);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+    }
+    
+    .game-portfolio-card.active-card {
+      cursor: pointer;
+      border-color: rgba(15, 60, 95, 0.15);
+    }
+    
+    .game-portfolio-card.active-card:hover {
+      border-color: var(--academic-blue);
+      box-shadow: 0 8px 24px rgba(15, 60, 95, 0.08);
+      transform: translateY(-4px);
+    }
+    
+    .game-portfolio-card.disabled-card {
+      opacity: 0.65;
+    }
+    
+    .game-card-thumbnail {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-light);
+    }
+    
+    .game-card-thumbnail svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    
+    .game-card-info {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    
+    .game-card-status {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.2rem 0.4rem;
+      border-radius: 2px;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+    
+    .status-published {
+      background-color: rgba(0, 210, 255, 0.1);
+      color: var(--academic-blue);
+      border: 1px solid rgba(0, 210, 255, 0.25);
+    }
+    
+    .status-pipeline {
+      background-color: #f3f4f6;
+      color: #4b5563;
+      border: 1px solid #d1d5db;
+    }
+    
+    .game-card-title {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      color: var(--text-primary);
+    }
+    
+    .game-card-desc {
+      font-size: 0.78rem;
+      line-height: 1.4;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+    
+    .game-card-action {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--academic-blue);
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    
+    .game-portfolio-card.disabled-card .game-card-action {
+      color: var(--text-muted);
+    }
+    
+    /* Responsive Media Queries */
+    @media (max-width: 1024px) {
+      .game-portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 900px) {
+      .game-hero-banner {
+        flex-direction: column;
+        padding: 1.5rem;
+      }
+      .game-hero-video-side {
+        width: 100%;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .game-portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* 3. Dynamic Reveal Animation classes */
+    .details-reveal-section {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-out, transform 0.5s ease-out;
+      transform: translateY(20px);
+    }
+    
+    .details-reveal-section.revealed {
+      max-height: 2000px; /* High enough limit to contain content */
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .divider-reveal {
+      opacity: 0;
+      max-height: 0;
+      margin: 0;
+      overflow: hidden;
+      transition: opacity 0.5s ease, max-height 0.5s ease, margin 0.5s ease;
+    }
+    
+    .divider-reveal.revealed {
+      opacity: 1;
+      max-height: 20px;
+      margin: 2.5rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pinned Academic Header / Navbar -->
+  <header class="journal-navbar" id="top-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="ICAT Lab Logo" id="logo-img">
+        <div class="logo-text">
+          <span class="lab-title">ICAT LAB</span>
+          <span class="lab-sub">Chiang Mai University</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="projects.html" class="nav-item">Our Projects</a>
+        <a href="events.html" class="nav-item">Events</a>
+        <a href="unreal.html" class="nav-item active-nav-item">Unreal Engine</a>
+        <a href="staff.html" class="nav-item">Faculty & Staff</a>
+      </nav>
+      <div class="journal-meta-tag">
+        <span>ICAT JOURNAL VOL. 26, NO. 1</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container styled like a Journal Paper -->
+  <main class="paper-layout" style="margin-top: calc(var(--navbar-height) + 2rem);">
+    
+    <!-- Paper Header Page Metadata -->
+    <header class="paper-header">
+      <div class="paper-category">SPECIAL ISSUE: GAME ENGINEERING</div>
+      <h1 class="paper-title">Unreal Engine Projects: Case Studies in Real-Time 3D Game Development</h1>
+      
+      <div class="paper-authors">
+        <p class="author-names">College of Arts, Media, and Technology, Chiang Mai University</p>
+        <p class="author-affiliations">Research Project Dossier on Student-Led Commercial Entertainment Deployments</p>
+      </div>
+      
+      <!-- Thick Line Divider typical of journals -->
+      <hr class="paper-divider-thick">
+    </header>
+
+    <!-- Subpage Introduction -->
+    <p class="subpage-intro-paragraph">
+      This dossier details commercial-grade game productions built using Epic Games' Unreal Engine within the academic pipelines of Chiang Mai University. It showcases the technical capacities, visual workflows, and publication pipelines managed entirely by student developers, bridging the gap between academic research and international entertainment platforms.
+    </p>
+
+    <!-- Double line divider standard in IEEE/Academic formats -->
+    <div class="paper-divider-double"></div>
+
+    <!-- Section I: Unreal Engine Game Portfolio -->
+    <section class="paper-section" id="portfolio-section">
+      <h2 class="section-title"><span class="section-num">I.</span> UNREAL ENGINE GAME PORTFOLIO</h2>
+      
+      <p class="section-paragraph">
+        Below is a directory of production-grade simulations and interactive digital environments developed under the ICAT Game Studio initiative using Unreal Engine. Click on a published project card to inspect its engineering design document and view footage.
+      </p>
+
+      <div class="game-portfolio-grid">
+        <!-- Whisper of Anima Card -->
+        <article class="game-portfolio-card active-card" onclick="scrollToProject('game-feature')">
+          <div class="game-card-thumbnail">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="120" fill="#eef2f6" />
+              <path d="M10,95 L190,95 M20,95 L50,115 M180,95 L150,115 M100,95 L100,115" stroke="#cbd5e1" stroke-width="1"/>
+              <circle cx="100" cy="50" r="22" fill="none" stroke="#0f3c5f" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <path d="M100,20 L100,80 M70,50 L130,50" stroke="#0f3c5f" stroke-width="1" opacity="0.4"/>
+              <polygon points="100,35 108,50 100,65 92,50" fill="none" stroke="#00d2ff" stroke-width="1.5"/>
+              <text x="12" y="22" font-family="Inter" font-size="8" fill="#6b7280" font-weight="bold">MODEL_ID: WOA_01</text>
+            </svg>
+          </div>
+          <div class="game-card-info">
+            <span class="game-card-status status-published">PUBLISHED</span>
+            <h4 class="game-card-title">Whisper of Anima</h4>
+            <p class="game-card-desc">A visually stunning third-person fantasy action game built entirely in Unreal Engine 5 by CAMT students.</p>
+            <span class="game-card-action">View Project Dossier <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </article>
+
+        <!-- Empty Card Slot 2 -->
+        <article class="game-portfolio-card disabled-card" style="background-color: #fafafa; border: 1px dashed #d1d5db; display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; min-height: 280px;">
+          <div style="color: var(--text-muted);">
+            <i class="fa-solid fa-cubes" style="font-size: 1.8rem; margin-bottom: 0.75rem; display: block; opacity: 0.5;"></i>
+            <h4 style="font-family: var(--font-serif); font-size: 0.95rem; margin-bottom: 0.25rem; font-weight: 600; color: var(--text-muted);">None</h4>
+            <p style="font-size: 0.75rem; line-height: 1.4; margin: 0; opacity: 0.7;">Pipeline Project Slot</p>
+          </div>
+        </article>
+
+        <!-- Empty Card Slot 3 -->
+        <article class="game-portfolio-card disabled-card" style="background-color: #fafafa; border: 1px dashed #d1d5db; display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; min-height: 280px;">
+          <div style="color: var(--text-muted);">
+            <i class="fa-solid fa-cubes" style="font-size: 1.8rem; margin-bottom: 0.75rem; display: block; opacity: 0.5;"></i>
+            <h4 style="font-family: var(--font-serif); font-size: 0.95rem; margin-bottom: 0.25rem; font-weight: 600; color: var(--text-muted);">None</h4>
+            <p style="font-size: 0.75rem; line-height: 1.4; margin: 0; opacity: 0.7;">Pipeline Project Slot</p>
+          </div>
+        </article>
+
+        <!-- Empty Card Slot 4 -->
+        <article class="game-portfolio-card disabled-card" style="background-color: #fafafa; border: 1px dashed #d1d5db; display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; min-height: 280px;">
+          <div style="color: var(--text-muted);">
+            <i class="fa-solid fa-cubes" style="font-size: 1.8rem; margin-bottom: 0.75rem; display: block; opacity: 0.5;"></i>
+            <h4 style="font-family: var(--font-serif); font-size: 0.95rem; margin-bottom: 0.25rem; font-weight: 600; color: var(--text-muted);">None</h4>
+            <p style="font-size: 0.75rem; line-height: 1.4; margin: 0; opacity: 0.7;">Pipeline Project Slot</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Double line divider standard in IEEE/Academic formats -->
+    <div class="paper-divider-double divider-reveal" id="feature-divider"></div>
+
+    <!-- Section II: Game Showcase (Whisper of Anima) -->
+    <section class="paper-section details-reveal-section" id="game-feature" style="position: relative;">
+      <h2 class="section-title"><span class="section-num">II.</span> FEATURED STEAM RELEASE</h2>
+      
+      <button class="close-details-btn-round" id="close-game-details" aria-label="Close details">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <p class="section-paragraph">
+        Developed as a culmination project at Chiang Mai University, <strong>Whisper of Anima</strong> is a high-fidelity fantasy action-adventure game. The project demonstrates full-scale studio integration, combining advanced graphics pipelines, locomotion state-machines, and spatial audio to meet the publishing guidelines of Valve's Steam Store.
+      </p>
+
+      <!-- High-Impact Pitch Hero Card for Whisper of Anima (Split Screen Layout) -->
+      <div class="game-hero-banner">
+        <!-- Left Side: YouTube loop video trailer -->
+        <div class="game-hero-video-side">
+          <iframe 
+            src="https://www.youtube.com/embed/0dcG38iSdvw?autoplay=1&mute=1&loop=1&playlist=0dcG38iSdvw&controls=1&showinfo=0&rel=0&modestbranding=1" 
+            title="Whisper of Anima Official Trailer" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        
+        <!-- Right Side: Content description and metadata -->
+        <div class="game-hero-content-side">
+          <span class="game-tag-badge">UNREAL ENGINE 5 RELEASE</span>
+          <h3 class="game-hero-title">Whisper of Anima</h3>
+          <p class="game-hero-subtitle">Developed by <strong>ICAT Game Studio</strong> (Chiang Mai University)</p>
+          <p class="game-hero-abstract">
+            A visually stunning third-person fantasy action game built entirely in Unreal Engine by Chiang Mai University students. The project showcases advanced graphics rendering pipelines, locomotion blending, and performance optimization benchmarking industry-grade student capability.
+          </p>
+          
+          <div style="margin-bottom: 2.25rem; font-size: 0.88rem; color: rgba(255, 255, 255, 0.7); font-family: monospace; border-top: 1px dashed rgba(255,255,255,0.15); padding-top: 1rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+            <div><strong>STUDIO:</strong> ICAT Game Studio</div>
+            <div><strong>ENGINE:</strong> Unreal Engine 5</div>
+            <div><strong>RELEASE DATE:</strong> 27 Oct, 2025</div>
+          </div>
+          
+          <!-- Call-to-action button to Steam Page -->
+          <a href="https://store.steampowered.com/app/3422930/Whisper_Of_Anima/" target="_blank" rel="noopener noreferrer" class="steam-cta-btn">
+            <i class="fa-brands fa-steam"></i>
+            <span>View on Steam Store</span>
+          </a>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- Thick bottom line indicating the end of the manuscript -->
+    <hr class="paper-divider-thick page-end-divider">
+
+  </main>
+
+  <!-- Section VI: Footer section containing Logo, Navbar duplications, and Follow Links -->
+  <footer class="journal-footer">
+    <div class="footer-container">
+      
+      <!-- Logo Block -->
+      <div class="footer-logo-block">
+        <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 1rem;">
+          <img src="logo.png" alt="ICAT Lab Logo" class="footer-logo">
+          <div class="footer-logo-text">
+            <h4>ICAT LAB</h4>
+            <p>Innovative Computer & Advanced Technology Lab</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-nav">
+        <h5>NAVIGATION</h5>
+        <div class="footer-nav-links">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Our Projects</a>
+          <a href="events.html">Events</a>
+          <a href="unreal.html">Unreal Engine</a>
+          <a href="staff.html">Faculty & Staff</a>
+        </div>
+      </div>
+
+      <!-- Contact Block -->
+      <div class="footer-contact">
+        <h5>CONTACT</h5>
+        <p class="contact-title">College of Arts, Media, and Technology</p>
+        <p class="contact-sub">Chiang Mai University</p>
+        <p class="contact-address">
+          239 Huay Kaew Rd. Tambon Su Thep, Amphoe Mueang Chiang Mai, Chiang Mai 50200, Thailand
+        </p>
+      </div>
+
+      <!-- Social Media Block -->
+      <div class="footer-social">
+        <h5>FOLLOW US</h5>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+          <span>Facebook</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Copyright details styled like standard publisher metadata -->
+    <div class="footer-copyright">
+      <p>&copy; 2026 ICAT Research Lab. All Rights Reserved. Formatted as an Academic Journal Web Interface.</p>
+    </div>
+  </footer>
+
+  <script>
+    function scrollToProject(id) {
+      const divider = document.getElementById('feature-divider');
+      const element = document.getElementById(id);
+      
+      if (element) {
+        if (divider) divider.classList.add('revealed');
+        element.classList.add('revealed');
+        
+        // Wait a brief moment for transition styling to take effect before scrolling
+        setTimeout(() => {
+          const offset = 90; // Adjust for sticky navbar height
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }, 150);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const closeBtn = document.getElementById('close-game-details');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          const element = document.getElementById('game-feature');
+          const divider = document.getElementById('feature-divider');
+          if (element) element.classList.remove('revealed');
+          if (divider) divider.classList.remove('revealed');
+          
+          // Scroll back to portfolio section
+          const portfolio = document.getElementById('portfolio-section');
+          if (portfolio) {
+            setTimeout(() => {
+              const offset = 90;
+              const portfolioPosition = portfolio.getBoundingClientRect().top;
+              const offsetPosition = portfolioPosition + window.pageYOffset - offset;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }, 50);
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
