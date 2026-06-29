@@ -13,10 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     <!-- Trigger Button -->
     <div id="icat-desktop-trigger" class="icat-trigger" title="Open ICAT System Hub">
       <div class="trigger-inner">
-        <i class="fa-solid fa-terminal"></i>
-        <span class="pulsing-halo"></span>
+        <i class="fa-solid fa-folder-open"></i>
       </div>
-      <span class="trigger-label">SYSTEM HUB</span>
+      <span class="trigger-label">ICAT HUB</span>
     </div>
 
     <!-- Desktop Window Container -->
@@ -24,22 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
       <!-- Title Bar -->
       <div class="icat-title-bar">
         <div class="icat-title-left">
-          <i class="fa-solid fa-network-wired"></i>
-          <span class="system-title">ICAT OS v1.0</span>
+          <i class="fa-solid fa-computer"></i>
+          <span class="system-title">ICAT Desktop HUD</span>
         </div>
         <div class="icat-title-right">
-          <span class="icat-system-time" id="system-clock">12:00:00</span>
           <button class="icat-win-btn icat-btn-minimize" id="icat-win-min" title="Minimize"><i class="fa-solid fa-minus"></i></button>
           <button class="icat-win-btn icat-btn-close" id="icat-win-close" title="Close"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-      </div>
-
-      <!-- Search Area -->
-      <div class="icat-search-bar-container">
-        <div class="icat-search-wrapper">
-          <i class="fa-solid fa-magnifying-glass search-icon"></i>
-          <input type="text" id="icat-desktop-search" placeholder="Search files, telemetry..." autocomplete="off" />
-          <button class="icat-search-clear" id="icat-search-clear" style="display: none;"><i class="fa-solid fa-xmark"></i></button>
         </div>
       </div>
 
@@ -55,28 +44,63 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
 
-        <!-- Desktop Grid View (Folders) -->
+        <!-- Desktop Grid View (Folders & Direct Links) -->
         <div class="icat-desktop-grid" id="icat-desktop-grid">
-          <div class="icat-grid-item" data-folder="research" data-keywords="research papers doc case study carbon smart city xr vr cmu documents">
+          <!-- Folder 1: ICAT IoT (External link) -->
+          <div class="icat-grid-item link-item" data-url="https://icat-iot.web.app" data-keywords="icat iot internet web app link external">
             <div class="icat-icon-wrapper">
-              <i class="fa-solid fa-folder-closed folder-main-icon"></i>
-              <i class="fa-solid fa-folder-open folder-open-icon"></i>
-              <span class="item-count">3</span>
+              <i class="fa-solid fa-cloud-arrow-up network-icon-blue"></i>
             </div>
-            <span class="icat-icon-label">Research Docs</span>
+            <span class="icat-icon-label">ICAT IoT</span>
           </div>
 
-          <div class="icat-grid-item" data-folder="telemetry" data-keywords="live telemetry system monitoring cpu gpu load iot status sensor stats performance">
-            <div class="icat-icon-wrapper telemetry-wrapper">
-              <i class="fa-solid fa-chart-line telemetry-main-icon"></i>
-              <span class="status-pulse-dot"></span>
+          <!-- Folder 2: Whisper Of Anima (External link) -->
+          <div class="icat-grid-item link-item" data-url="https://www.youtube.com/watch?v=0dcG38iSdvw" data-keywords="whisper of anima youtube video clip presentation unreal game">
+            <div class="icat-icon-wrapper">
+              <i class="fa-brands fa-youtube youtube-icon-red"></i>
+            </div>
+            <span class="icat-icon-label">Whisper of Anima</span>
+          </div>
+
+          <!-- Folder 3: Presentation (External link) -->
+          <div class="icat-grid-item link-item" data-url="https://www.canva.com/design/DAGPlUgsBmQ/UmNTxmGYy1dFL3yyzQ1hxA/view?embed#1" data-keywords="presentation slides canva design research layout info">
+            <div class="icat-icon-wrapper">
+              <i class="fa-solid fa-file-powerpoint presentation-icon-orange"></i>
+            </div>
+            <span class="icat-icon-label">Presentation</span>
+          </div>
+
+          <!-- Folder 4: Summary (External link) -->
+          <div class="icat-grid-item link-item" data-url="https://www.canva.com/design/DAHLl9Z4kwA/soJ1x_6d7ZyehRbo_o6QYg/view?embed" data-keywords="summary document canva overview sheet quick guide report">
+            <div class="icat-icon-wrapper">
+              <i class="fa-solid fa-file-contract summary-icon-teal"></i>
+            </div>
+            <span class="icat-icon-label">Summary</span>
+          </div>
+
+          <!-- Folder 5: Turtle Project (Internal view) -->
+          <div class="icat-grid-item folder-item" data-folder="turtle" data-keywords="icon turtle project conservation simulation green area">
+            <div class="icat-icon-wrapper">
+              <i class="fa-solid fa-turtle turtle-icon-green"></i>
+            </div>
+            <span class="icat-icon-label">Turtle Project</span>
+          </div>
+
+          <!-- Folder 6: Live Telemetry (Internal view) -->
+          <div class="icat-grid-item folder-item" data-folder="telemetry" data-keywords="live telemetry system monitoring cpu gpu load iot status sensor stats performance">
+            <div class="icat-icon-wrapper">
+              <i class="fa-solid fa-folder folder-main-icon"></i>
+              <i class="fa-solid fa-folder-open folder-open-icon"></i>
+              <span class="telemetry-dot"></span>
             </div>
             <span class="icat-icon-label">Live Telemetry</span>
           </div>
 
-          <div class="icat-grid-item" data-folder="network" data-keywords="lab network directory staff contact email links camt cmu faculty">
+          <!-- Folder 7: Lab Network (Internal view) -->
+          <div class="icat-grid-item folder-item" data-folder="network" data-keywords="lab network directory staff contact email links camt cmu faculty">
             <div class="icat-icon-wrapper">
-              <i class="fa-solid fa-globe network-main-icon"></i>
+              <i class="fa-solid fa-folder folder-main-icon"></i>
+              <i class="fa-solid fa-folder-open folder-open-icon"></i>
             </div>
             <span class="icat-icon-label">Lab Network</span>
           </div>
@@ -85,37 +109,22 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- Explorer Views (Containers for sub-folders) -->
         <div class="icat-explorer-view" id="icat-explorer-view" style="display: none;">
           
-          <!-- SUB-VIEW 1: Research Files -->
-          <div class="icat-sub-content" id="sub-research" style="display: none;">
-            <div class="icat-file-list" id="research-file-list">
-              <div class="icat-file-item" data-file="carbon" data-keywords="cmu carbon footprint index real-time 3d netzero erdi engineering study">
-                <div class="file-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                <div class="file-details">
-                  <div class="file-title">CMU Carbon Index Study</div>
-                  <div class="file-meta">PDF • 1.2 MB • Published: June 2026</div>
+          <!-- SUB-VIEW 1: Turtle Project details -->
+          <div class="icat-sub-content" id="sub-turtle" style="display: none;">
+            <div class="turtle-project-panel">
+              <div class="turtle-header">
+                <i class="fa-solid fa-turtle turtle-panel-icon"></i>
+                <div class="turtle-title-area">
+                  <h4>Turtle Project</h4>
+                  <p class="turtle-meta">Sea Turtle Conservation & Drone Mapping Integration</p>
                 </div>
               </div>
-              <div class="icat-file-item" data-file="xr" data-keywords="immersive reality xr vr virtual tour cmu camt case study interactive">
-                <div class="file-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                <div class="file-details">
-                  <div class="file-title">Immersive Reality (XR) Report</div>
-                  <div class="file-meta">PDF • 2.5 MB • Published: April 2026</div>
+              <div class="turtle-body">
+                <p>This project uses advanced photogrammetry, smart sensors, and spatial database mapping (GIS) to monitor nesting sites and track sea turtle hatchling migration paths along Southern Thai coastlines.</p>
+                <div class="turtle-status">
+                  <span class="status-badge"><i class="fa-solid fa-circle-info"></i> Project Status</span>
+                  <p>Details and simulation configurations are currently being updated by the ICAT team. Interactive telemetry widgets for drone tracking grids will be deployed in the next minor system release.</p>
                 </div>
-              </div>
-              <div class="icat-file-item" data-file="smartcity" data-keywords="smart livable city urban planning thailand noise particulate pm2.5 gis">
-                <div class="file-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                <div class="file-details">
-                  <div class="file-title">Smart & Livable City Case</div>
-                  <div class="file-meta">PDF • 1.8 MB • Published: Feb 2026</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Single File Content Viewer (Nested) -->
-            <div class="icat-file-viewer" id="icat-file-viewer" style="display: none;">
-              <button class="file-close-btn" id="file-close-btn"><i class="fa-solid fa-arrow-left"></i> Back to Documents</button>
-              <div class="file-viewer-body" id="file-viewer-body">
-                <!-- Dynamic Content Loaded Here -->
               </div>
             </div>
           </div>
@@ -234,11 +243,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <!-- Taskbar / Dock at bottom of mini desktop -->
       <div class="icat-taskbar">
+        <!-- Start / Home button -->
         <button class="taskbar-btn" id="taskbar-home-btn" title="Back to Desktop">
           <i class="fa-solid fa-house"></i>
         </button>
-        <div class="taskbar-active-apps">
-          <span class="taskbar-app-pill active" id="taskbar-app-indicator"><i class="fa-solid fa-border-all"></i> Desktop</span>
+
+        <!-- Windows-like Search Box in Taskbar -->
+        <div class="taskbar-search-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="icat-desktop-search" placeholder="Type here to search..." autocomplete="off" />
+          <button class="icat-search-clear" id="icat-search-clear" style="display: none;"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- Clock & Status at Bottom-Right of Taskbar -->
+        <div class="taskbar-status-area">
+          <div class="system-icons">
+            <i class="fa-solid fa-wifi" title="Network Connected"></i>
+          </div>
+          <span class="icat-system-time" id="system-clock">12:00:00</span>
         </div>
       </div>
     </div>
@@ -255,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const windowEl = document.getElementById('icat-desktop-window');
   const closeBtn = document.getElementById('icat-win-close');
   const minimizeBtn = document.getElementById('icat-win-min');
-  const searchInput = document.getElementById('icat-desktop-search');
+  const searchInput = document.querySelector('.taskbar-search-wrapper input');
   const clearSearchBtn = document.getElementById('icat-search-clear');
   
   const breadcrumbContainer = document.getElementById('icat-breadcrumb-container');
@@ -266,18 +288,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const desktopGrid = document.getElementById('icat-desktop-grid');
   const explorerView = document.getElementById('icat-explorer-view');
   
-  const subResearch = document.getElementById('sub-research');
+  const subTurtle = document.getElementById('sub-turtle');
   const subTelemetry = document.getElementById('sub-telemetry');
   const subNetwork = document.getElementById('sub-network');
-  const subContents = [subResearch, subTelemetry, subNetwork];
+  const subContents = [subTurtle, subTelemetry, subNetwork];
 
   const taskbarHomeBtn = document.getElementById('taskbar-home-btn');
-  const taskbarAppIndicator = document.getElementById('taskbar-app-indicator');
-
-  const fileViewer = document.getElementById('icat-file-viewer');
-  const fileViewerBody = document.getElementById('file-viewer-body');
-  const fileViewerClose = document.getElementById('file-close-btn');
-  const researchFileList = document.getElementById('research-file-list');
 
   // Telemetry variables
   const cpuPercent = document.getElementById('cpu-percent');
@@ -293,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const nodeCPing = document.getElementById('node-c-ping');
 
   // Application State
-  let currentFolder = null; // null (Desktop), 'research', 'telemetry', 'network'
+  let currentFolder = null; // null (Desktop), 'turtle', 'telemetry', 'network'
   let systemUptimeSeconds = 51300; // Simulated starting uptime (approx 14h 15m)
   let isBoosted = false;
   let telemetryInterval = null;
@@ -353,20 +369,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     breadcrumbContainer.style.display = 'flex';
     
-    if (folderName === 'research') {
-      subResearch.style.display = 'block';
-      breadcrumbCurrent.textContent = 'Research Docs';
-      taskbarAppIndicator.innerHTML = '<i class="fa-solid fa-folder-open"></i> Research Docs';
-      // Reset nested file viewer state
-      closeFileViewer();
+    if (folderName === 'turtle') {
+      subTurtle.style.display = 'block';
+      breadcrumbCurrent.textContent = 'Turtle Project';
     } else if (folderName === 'telemetry') {
       subTelemetry.style.display = 'block';
       breadcrumbCurrent.textContent = 'Live Telemetry';
-      taskbarAppIndicator.innerHTML = '<i class="fa-solid fa-chart-line"></i> Live Telemetry';
     } else if (folderName === 'network') {
       subNetwork.style.display = 'block';
       breadcrumbCurrent.textContent = 'Lab Network';
-      taskbarAppIndicator.innerHTML = '<i class="fa-solid fa-globe"></i> Lab Network';
     }
 
     searchInput.value = '';
@@ -379,7 +390,6 @@ document.addEventListener('DOMContentLoaded', () => {
     desktopGrid.style.display = 'grid';
     explorerView.style.display = 'none';
     breadcrumbContainer.style.display = 'none';
-    taskbarAppIndicator.innerHTML = '<i class="fa-solid fa-border-all"></i> Desktop';
     
     // Reset search
     searchInput.value = '';
@@ -387,123 +397,29 @@ document.addEventListener('DOMContentLoaded', () => {
     filterDesktopGrid();
   }
 
-  // Register folder clicks
-  const folderItems = document.querySelectorAll('.icat-grid-item');
-  folderItems.forEach(item => {
+  // Register grid clicks (Link items and folder items)
+  const gridItems = document.querySelectorAll('.icat-grid-item');
+  gridItems.forEach(item => {
     item.addEventListener('click', () => {
-      const folder = item.getAttribute('data-folder');
-      navigateToFolder(folder);
+      if (item.classList.contains('link-item')) {
+        // Direct link
+        const url = item.getAttribute('data-url');
+        if (url) {
+          window.open(url, '_blank');
+        }
+      } else if (item.classList.contains('folder-item')) {
+        // Sub-folder navigation
+        const folder = item.getAttribute('data-folder');
+        navigateToFolder(folder);
+      }
     });
   });
 
-  backBtn.addEventListener('click', () => {
-    // If in research file viewer, go back to document list first
-    if (currentFolder === 'research' && fileViewer.style.display === 'block') {
-      closeFileViewer();
-    } else {
-      navigateToDesktop();
-    }
-  });
-  
+  backBtn.addEventListener('click', navigateToDesktop);
   breadcrumbHome.addEventListener('click', navigateToDesktop);
   taskbarHomeBtn.addEventListener('click', navigateToDesktop);
 
-  // 8. File Viewer Details (Within Research Docs)
-  const fileData = {
-    carbon: {
-      title: "CMU Carbon Index Study",
-      subtitle: "Integrated Real-time ESG Campus Telemetry",
-      meta: "PMU-C Grant-2025 • Collaborating Institution: ERDI-CMU",
-      content: `
-        <p><strong>Abstract:</strong> This research presents a virtual 3D carbon telemetry dashboard designed for the Chiang Mai University (CMU) campus. By networking smart meters and environmental sensors, the Digital Twin platform maps energy distributions and simulates green area offset quotients.</p>
-        <div class="doc-highlights">
-          <div class="highlight-stat">
-            <span class="stat-number">12.4%</span>
-            <span class="stat-lbl">Scope 1 Offset</span>
-          </div>
-          <div class="highlight-stat">
-            <span class="stat-number">35 Nodes</span>
-            <span class="stat-lbl">Sensing Grid</span>
-          </div>
-        </div>
-        <p><strong>Key Results:</strong> The deployment resulted in a 12.4% efficiency increase in localized cooling allocations, saving approximately 4.8 tons of CO2 equivalent emissions monthly.</p>
-        <a href="projects.html#carbon-footprint" class="doc-link-btn">Read Full Article in Projects <i class="fa-solid fa-arrow-right"></i></a>
-      `
-    },
-    xr: {
-      title: "Immersive Reality (XR) Report",
-      subtitle: "Evaluating Spatial Mapping Accuracy in Virtual Heritage Tours",
-      meta: "Faculty Funding Program • Collaborating Institution: CAMT",
-      content: `
-        <p><strong>Abstract:</strong> This case study explores standard deviations in spatial data scanning for immersive reality (XR/VR) training platforms. Tests were run in historical buildings in Phuket and botanical conservation chambers in Chiang Mai.</p>
-        <div class="doc-highlights">
-          <div class="highlight-stat">
-            <span class="stat-number">±2.4mm</span>
-            <span class="stat-lbl">Spatial Accuracy</span>
-          </div>
-          <div class="highlight-stat">
-            <span class="stat-number">90 FPS</span>
-            <span class="stat-lbl">Optimized Render</span>
-          </div>
-        </div>
-        <p><strong>Key Results:</strong> Spatial tracking latency was reduced by 15% using quad-mesh optimizations in Unreal Engine 5.2, enabling fully responsive, motion-sickness-free VR setups.</p>
-        <a href="unreal.html" class="doc-link-btn">View Unreal Projects <i class="fa-solid fa-arrow-right"></i></a>
-      `
-    },
-    smartcity: {
-      title: "Smart & Livable City Case Study",
-      subtitle: "Urban GIS Grid Monitoring & Dust Index Analytics",
-      meta: "CMU Research Foundation • Smart City Thailand Group",
-      content: `
-        <p><strong>Abstract:</strong> Investigating spatial noise contours and fine particulate matter (PM2.5) distributions in Northern Thailand. This GIS-integrated dashboard processes citizen-level reports alongside automated sensors to predict hazard zones.</p>
-        <div class="doc-highlights">
-          <div class="highlight-stat">
-            <span class="stat-number">118 Nodes</span>
-            <span class="stat-lbl">Active IoT Web</span>
-          </div>
-          <div class="highlight-stat">
-            <span class="stat-number">88.5%</span>
-            <span class="stat-lbl">Prediction Acc.</span>
-          </div>
-        </div>
-        <p><strong>Key Results:</strong> Implemented noise-contour grids that helped municipal departments identify heavy-traffic noise hubs and enforce environmental zoning.</p>
-        <a href="projects.html#smart-livable-city" class="doc-link-btn">Read Full Article in Projects <i class="fa-solid fa-arrow-right"></i></a>
-      `
-    }
-  };
-
-  const fileItems = document.querySelectorAll('.icat-file-item');
-  fileItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const fileId = item.getAttribute('data-file');
-      openFileViewer(fileId);
-    });
-  });
-
-  function openFileViewer(fileId) {
-    const data = fileData[fileId];
-    if (data) {
-      fileViewerBody.innerHTML = `
-        <h4 class="viewer-title">${data.title}</h4>
-        <h5 class="viewer-subtitle">${data.subtitle}</h5>
-        <div class="viewer-meta">${data.meta}</div>
-        <div class="viewer-text">${data.content}</div>
-      `;
-      researchFileList.style.display = 'none';
-      fileViewer.style.display = 'block';
-      breadcrumbCurrent.textContent = data.title;
-    }
-  }
-
-  function closeFileViewer() {
-    fileViewer.style.display = 'none';
-    researchFileList.style.display = 'block';
-    breadcrumbCurrent.textContent = 'Research Docs';
-  }
-
-  fileViewerClose.addEventListener('click', closeFileViewer);
-
-  // 9. Telemetry Simulation
+  // 8. Telemetry Simulation
   function formatUptime(sec) {
     const hrs = String(Math.floor(sec / 3600)).padStart(2, '0');
     const mins = String(Math.floor((sec % 3600) / 60)).padStart(2, '0');
@@ -553,11 +469,9 @@ document.addEventListener('DOMContentLoaded', () => {
     gpuTemp.textContent = `${gpuVal}°C`;
     gpuBarFill.style.width = `${Math.min(100, (gpuVal / 100) * 100)}%`;
     if (gpuVal > 75) {
-      gpuBarFill.style.background = '#ef4444'; // Red for high temp
-    } else if (gpuVal > 60) {
-      gpuBarFill.style.background = '#f59e0b'; // Amber
+      gpuBarFill.style.background = '#0f3c5f'; // High temp styling to match academic blue
     } else {
-      gpuBarFill.style.background = '#0d9488'; // Teal/Default
+      gpuBarFill.style.background = '#0f3c5f'; // Academic blue theme
     }
 
     ramUsage.textContent = `${ramVal} / 16.0 GB`;
@@ -573,7 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Blink Node C green and set it online
       nodeCLed.className = 'node-led online';
       nodeCPing.textContent = '14ms';
-      nodeCPing.style.color = '#10b981';
+      nodeCPing.style.color = '#0f3c5f';
       // Trigger instant update
       updateTelemetryMeters();
     } else {
@@ -597,7 +511,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cpuBarFill.style.width = '1%';
     gpuTemp.textContent = '35°C';
     gpuBarFill.style.width = '35%';
-    gpuBarFill.style.background = '#0d9488';
     ramUsage.textContent = '1.2 / 16.0 GB';
     ramBarFill.style.width = '7%';
 
@@ -628,7 +541,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2000);
   });
 
-  // 10. Search logic
+  // 9. Search logic
   searchInput.addEventListener('input', () => {
     const val = searchInput.value.toLowerCase().trim();
     if (val.length > 0) {
@@ -669,20 +582,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function filterExplorerItems(query = '') {
-    // If in Research view
-    if (currentFolder === 'research') {
-      const items = researchFileList.querySelectorAll('.icat-file-item');
-      items.forEach(item => {
-        const keywords = item.getAttribute('data-keywords') || '';
-        const title = item.querySelector('.file-title').textContent.toLowerCase();
-        if (keywords.includes(query) || title.includes(query)) {
-          item.style.display = 'flex';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    } else if (currentFolder === 'telemetry') {
-      // Filter the telemetry items (e.g. node names)
+    if (currentFolder === 'telemetry') {
       const items = document.querySelectorAll('.node-item');
       items.forEach(item => {
         const name = item.querySelector('.node-name').textContent.toLowerCase();
@@ -693,7 +593,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     } else if (currentFolder === 'network') {
-      // Filter network items
       const items = document.querySelectorAll('.network-item');
       items.forEach(item => {
         const name = item.querySelector('.network-name').textContent.toLowerCase();
