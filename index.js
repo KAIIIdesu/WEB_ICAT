@@ -151,16 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status: "Active Deployment",
       collab: "ERDI-CMU, Faculty of Engineering",
       link: "https://netzero-cmu-phase-2.vercel.app",
-      svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-              <rect width="200" height="120" fill="#f3f4f6" />
-              <path d="M20,100 L60,80 L100,90 L140,50 L180,60" fill="none" stroke="#0f3c5f" stroke-width="2"/>
-              <circle cx="20" cy="100" r="4" fill="#0f3c5f"/>
-              <circle cx="60" cy="80" r="4" fill="#0f3c5f"/>
-              <circle cx="100" cy="90" r="4" fill="#0f3c5f"/>
-              <circle cx="140" cy="50" r="4" fill="#0f3c5f"/>
-              <circle cx="180" cy="60" r="4" fill="#0f3c5f"/>
-              <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">NETZERO-CMU 3D</text>
-            </svg>`
+      images: ["Pic/CarbonFP_1.png", "Pic/CarbonFP_2.png"]
     },
     {
       tag: "02: MARINE BIO",
@@ -172,12 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status: "Active Production",
       collab: "Marine Conservation Platform",
       link: "https://coralcollegethailand.org/",
-      svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-              <rect width="200" height="120" fill="#f3f4f6" />
-              <path d="M100,100 C80,80 70,50 100,20 C130,50 120,80 100,100 Z" fill="none" stroke="#0284c7" stroke-width="2"/>
-              <path d="M70,80 Q100,60 130,80" fill="none" stroke="#0f3c5f" stroke-width="1.5" stroke-dasharray="4 2"/>
-              <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">CORAL EDUCATION</text>
-            </svg>`
+      images: ["Pic/CoralCollege.jpg"]
     },
     {
       tag: "03: URBAN PLANNING",
@@ -189,13 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status: "Active Deployment",
       collab: "Smart City Thailand Group",
       link: "https://smartlivablecityth.com/",
-      svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-              <rect width="200" height="120" fill="#f3f4f6" />
-              <rect x="30" y="50" width="30" height="50" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
-              <rect x="70" y="30" width="40" height="70" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
-              <rect x="120" y="60" width="35" height="40" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
-              <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">URBAN MAPPING</text>
-            </svg>`
+      images: ["Pic/SmartnLivableCity.png"]
     },
     {
       tag: "04: TOURISM MOBILE",
@@ -207,12 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status: "Active Deployment",
       collab: "Tourism Authority of Thailand",
       link: "https://visit-lamphun.web.app/",
-      svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-              <rect width="200" height="120" fill="#f3f4f6" />
-              <circle cx="100" cy="50" r="12" fill="none" stroke="#e11d48" stroke-width="2"/>
-              <path d="M100,62 L100,85 M85,72 L115,72" stroke="#e11d48" stroke-width="1.5"/>
-              <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">LAMPHUN GUIDE</text>
-            </svg>`
+      images: ["Pic/VisitLamphun.png"]
     },
     {
       tag: "05: CLINICAL XR",
@@ -224,12 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status: "Active Clinical Trials",
       collab: "Faculty of Associated Medical Sciences",
       link: "https://exerbrain.ams.cmu.ac.th/",
-      svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-              <rect width="200" height="120" fill="#f3f4f6" />
-              <path d="M10,60 Q50,20 100,60 T190,60" fill="none" stroke="#ef4444" stroke-width="2"/>
-              <circle cx="100" cy="60" r="15" fill="none" stroke="#0f3c5f" stroke-dasharray="4 2"/>
-              <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">STROKE REHAB</text>
-            </svg>`
+      images: ["Pic/EcervrainCMU.png"]
     },
     {
       tag: "06: AR SIMULATION",
@@ -241,12 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status: "Active Deployment",
       collab: "Queen Sirikit Botanic Garden",
       link: "https://bontanicgraden-phase2.web.app/",
-      svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-              <rect width="200" height="120" fill="#f3f4f6" />
-              <path d="M100,15 L125,50 L100,85 L75,50 Z" fill="none" stroke="#16a34a" stroke-width="2"/>
-              <line x1="100" y1="15" x2="100" y2="85" stroke="#16a34a" stroke-width="1.5"/>
-              <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">QUEEN SIRIKIT BOTANIC</text>
-            </svg>`
+      images: ["Pic/bontanicgraden.png"]
     },
     {
       tag: "07: CULTURE TRAVEL",
@@ -258,12 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status: "Active Deployment",
       collab: "CAMT Faith & Fortune Group",
       link: "https://camt-muteru.web.app/login",
-      svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-              <rect width="200" height="120" fill="#f3f4f6" />
-              <circle cx="100" cy="60" r="22" fill="none" stroke="#d97706" stroke-width="1.5"/>
-              <polygon points="100,28 105,43 120,43 108,53 112,68 100,58 88,68 92,53 80,43 95,43" fill="#d97706" opacity="0.8"/>
-              <text x="15" y="20" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">FAITH TOURISM</text>
-            </svg>`
+      images: ["Pic/Muteru.png"]
     },
     {
       tag: "08: GAME SIMULATOR",
@@ -275,11 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status: "Active Production",
       collab: "Faculty of Dentistry, CMU",
       link: "https://letfill-cmu.web.app/",
-      svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-              <rect width="200" height="120" fill="#f3f4f6" />
-              <path d="M70,40 Q100,30 130,40 Q140,80 100,100 Q60,80 70,40 Z" fill="none" stroke="#0f3c5f" stroke-width="2"/>
-              <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">DENTAL TRAINER</text>
-            </svg>`
+      images: ["Pic/LetsFillCMU1.png", "Pic/LetsFillCMU2.png", "Pic/LetsFillCMU3.png"]
     },
     {
       tag: "09: 3D DIGITAL TWIN",
@@ -291,12 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status: "Active Live Feeds",
       collab: "ICAT Research Lab Group",
       link: "https://icat-iot.web.app/",
-      svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-              <rect width="200" height="120" fill="#f3f4f6" />
-              <ellipse cx="100" cy="60" rx="50" ry="20" fill="none" stroke="#0f3c5f" stroke-dasharray="4 2"/>
-              <rect x="75" y="45" width="50" height="30" fill="#0f3c5f" opacity="0.3" stroke="#0f3c5f" stroke-width="1"/>
-              <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">WEBGL VIEWPORT</text>
-            </svg>`
+      images: ["Pic/ICAT Digital Twin1.png", "Pic/ICAT Digital Twin2.png"]
     }
   ];
 
@@ -324,7 +275,41 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('detail-spec-collab').textContent = data.collab;
 
     detailProjectLink.setAttribute('href', data.link);
-    detailProjectPreview.innerHTML = data.svg;
+    
+    // Reset slideshow interval
+    if (window.projectSlideshowInterval) {
+      clearInterval(window.projectSlideshowInterval);
+      window.projectSlideshowInterval = null;
+    }
+
+    if (data.images && data.images.length > 0) {
+      if (data.images.length === 1) {
+        detailProjectPreview.innerHTML = `<img src="${data.images[0]}" alt="${data.title}" style="width: 100%; height: 100%; object-fit: cover; display:block;">`;
+      } else {
+        const slidesHtml = data.images.map(img => `
+          <img src="${img}" class="slideshow-slide" style="width: ${100 / data.images.length}%;" />
+        `).join('');
+        
+        detailProjectPreview.innerHTML = `
+          <div class="slideshow-container">
+            <div class="slideshow-track" style="width: ${data.images.length * 100}%;">
+              ${slidesHtml}
+            </div>
+          </div>
+        `;
+        
+        const track = detailProjectPreview.querySelector('.slideshow-track');
+        let currentSlide = 0;
+        
+        window.projectSlideshowInterval = setInterval(() => {
+          currentSlide = (currentSlide + 1) % data.images.length;
+          const offset = currentSlide * (100 / data.images.length);
+          track.style.transform = `translateX(-${offset}%)`;
+        }, 3000);
+      }
+    } else {
+      detailProjectPreview.innerHTML = '';
+    }
 
     projectDetailsContainer.classList.add('revealed');
 

@@ -2645,5 +2645,33 @@ body {
   }
 }
 
+/* Slider & Client Logo Updates */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slideshow-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slideshow-slide {
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.client-logo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background-color: #ffffff;
+}
+
 
 
