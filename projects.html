@@ -67,98 +67,195 @@
 
     <div class="paper-divider-double"></div>
 
-    <!-- Section I: Project Portfolio Directory -->
-    <section class="paper-section" id="portfolio-section">
-      <h2 class="section-title"><span class="section-num">I.</span> PROJECT PORTFOLIO DIRECTORY</h2>
-      
+    <!-- Section I: Digital Twins - IoT & Visualisation -->
+    <section class="paper-section" id="digital-twins-section">
+      <h2 class="section-title"><span class="section-num">I.</span> DIGITAL TWINS - IOT & VISUALISATION</h2>
       <p class="section-paragraph">
-        Below is a directory of production-grade simulations and interactive digital environments developed under the ICAT Game Studio initiative using Unreal Engine. Click on a published project card to inspect its engineering design document.
+        Interactive 3D dashboards, WebGL architectures, and digital twin environments connected with IoT sensor grids:
       </p>
 
       <div class="game-portfolio-grid">
-        <!-- Project 1: CMU Carbon Footprint -->
-        <article class="game-portfolio-card active-card" onclick="selectProject(0)">
+        <!-- Project 1 -->
+        <article class="game-portfolio-card" onclick="selectProject('digital-twins', 0)">
           <div class="game-card-thumbnail">
             <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
               <rect width="200" height="120" fill="#f3f4f6" />
-              <path d="M20,100 L60,80 L100,90 L140,50 L180,60" fill="none" stroke="#0f3c5f" stroke-width="2"/>
-              <circle cx="20" cy="100" r="4" fill="#0f3c5f"/>
-              <circle cx="60" cy="80" r="4" fill="#0f3c5f"/>
-              <circle cx="100" cy="90" r="4" fill="#0f3c5f"/>
-              <circle cx="140" cy="50" r="4" fill="#0f3c5f"/>
-              <circle cx="180" cy="60" r="4" fill="#0f3c5f"/>
-              <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">NETZERO-CMU 3D</text>
+              <path d="M40,90 Q100,20 160,90" fill="none" stroke="#0f3c5f" stroke-width="2"/>
+              <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">AR TOURISM</text>
             </svg>
           </div>
           <div class="game-card-info">
-            <span class="game-card-status status-published">PUBLISHED</span>
+            <h4 class="game-card-title">Botanic Garden AR Tourism</h4>
+            <p class="game-card-desc">Immersive AR natural museum experience.</p>
+            <span class="game-card-action">Inspect Dossier <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="game-portfolio-card" onclick="selectProject('digital-twins', 1)">
+          <div class="game-card-thumbnail">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="120" fill="#f3f4f6" />
+              <circle cx="100" cy="60" r="25" fill="none" stroke="#d97706" stroke-width="1.5" />
+              <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">SPIRITUAL TOURISM</text>
+            </svg>
+          </div>
+          <div class="game-card-info">
+            <h4 class="game-card-title">AR Spiritual Tourism</h4>
+            <p class="game-card-desc">Spiritual AR paths & mini-games in Chiang Mai.</p>
+            <span class="game-card-action">Inspect Dossier <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="game-portfolio-card" onclick="selectProject('digital-twins', 2)">
+          <div class="game-card-thumbnail">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="120" fill="#f3f4f6" />
+              <rect x="60" y="40" width="80" height="48" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
+              <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">CAMT TWIN 3D</text>
+            </svg>
+          </div>
+          <div class="game-card-info">
+            <h4 class="game-card-title">CAMT 3D Digital Twin</h4>
+            <p class="game-card-desc">3D WebGL sensors real-time building visualization.</p>
+            <span class="game-card-action">Inspect Dossier <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="game-portfolio-card" onclick="selectProject('digital-twins', 3)">
+          <div class="game-card-thumbnail">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="120" fill="#f3f4f6" />
+              <path d="M30,80 L70,50 L110,65 L150,30" fill="none" stroke="#0f3c5f" stroke-width="1.5" />
+              <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">CARBON FOOTPRINT</text>
+            </svg>
+          </div>
+          <div class="game-card-info">
             <h4 class="game-card-title">CMU Carbon Footprint</h4>
-            <p class="game-card-desc">Real-time 3D Carbon Emission Dashboard for CMU.</p>
+            <p class="game-card-desc">3D Dashboard tracking campus carbon emissions.</p>
             <span class="game-card-action">Inspect Dossier <i class="fa-solid fa-arrow-right"></i></span>
           </div>
         </article>
 
-        <!-- Project 2: Coral College -->
-        <article class="game-portfolio-card active-card" onclick="selectProject(1)">
+        <!-- Project 5 -->
+        <article class="game-portfolio-card" onclick="selectProject('digital-twins', 4)">
           <div class="game-card-thumbnail">
             <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
               <rect width="200" height="120" fill="#f3f4f6" />
-              <path d="M100,100 C80,80 70,50 100,20 C130,50 120,80 100,100 Z" fill="none" stroke="#0284c7" stroke-width="2"/>
-              <path d="M70,80 Q100,60 130,80" fill="none" stroke="#0f3c5f" stroke-width="1.5" stroke-dasharray="4 2"/>
-              <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">CORAL EDUCATION</text>
+              <circle cx="100" cy="60" r="10" fill="#0f3c5f" opacity="0.3"/>
+              <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">BUILDING TWIN</text>
             </svg>
           </div>
           <div class="game-card-info">
-            <span class="game-card-status status-published">PUBLISHED</span>
-            <h4 class="game-card-title">Coral College</h4>
-            <p class="game-card-desc">Coral Reef Education Platform.</p>
+            <h4 class="game-card-title">Building Digital Twin Platform</h4>
+            <p class="game-card-desc">Web 3D sensors and dashboard (Coming Soon).</p>
             <span class="game-card-action">Inspect Dossier <i class="fa-solid fa-arrow-right"></i></span>
           </div>
         </article>
+      </div>
+    </section>
 
-        <!-- Project 3: Smart & Livable City -->
-        <article class="game-portfolio-card active-card" onclick="selectProject(2)">
+    <div class="paper-divider-double"></div>
+
+    <!-- Section II: Immersive reality and games -->
+    <section class="paper-section" id="immersive-reality-section">
+      <h2 class="section-title"><span class="section-num">II.</span> IMMERSIVE REALITY AND GAMES</h2>
+      <p class="section-paragraph">
+        Immersive VR safety training simulators, virtual interactive environments, and therapeutic game experiences:
+      </p>
+
+      <div class="game-portfolio-grid">
+        <!-- Project 6 -->
+        <article class="game-portfolio-card" onclick="selectProject('immersive-reality', 0)">
           <div class="game-card-thumbnail">
             <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
               <rect width="200" height="120" fill="#f3f4f6" />
-              <rect x="30" y="50" width="30" height="50" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
-              <rect x="70" y="30" width="40" height="70" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
-              <rect x="120" y="60" width="35" height="40" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
-              <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">URBAN MAPPING</text>
+              <polygon points="100,20 150,90 50,90" fill="none" stroke="#0f3c5f" stroke-width="2" />
+              <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">VR SAFETY TRAINING</text>
             </svg>
           </div>
           <div class="game-card-info">
-            <span class="game-card-status status-published">PUBLISHED</span>
-            <h4 class="game-card-title">Smart & Livable City</h4>
-            <p class="game-card-desc">Urban Data Platform for Smart City Planning.</p>
+            <h4 class="game-card-title">VR Safety Training (Murata)</h4>
+            <p class="game-card-desc">Virtual simulation of factory safety procedures.</p>
             <span class="game-card-action">Inspect Dossier <i class="fa-solid fa-arrow-right"></i></span>
           </div>
         </article>
 
-        <!-- Placeholder 4 -->
-        <article class="game-portfolio-card disabled-card" style="background-color: #fafafa; border: 1px dashed #d1d5db; display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; min-height: 280px;">
-          <div style="color: var(--text-muted);">
-            <i class="fa-solid fa-cubes" style="font-size: 1.8rem; margin-bottom: 0.75rem; display: block; opacity: 0.5;"></i>
-            <h4 style="font-family: var(--font-serif); font-size: 0.95rem; margin-bottom: 0.25rem; font-weight: 600; color: var(--text-muted);">None</h4>
-            <p style="font-size: 0.75rem; line-height: 1.4; margin: 0; opacity: 0.7;">Pipeline Project Slot</p>
+        <!-- Project 7 -->
+        <article class="game-portfolio-card" onclick="selectProject('immersive-reality', 1)">
+          <div class="game-card-thumbnail">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="120" fill="#f3f4f6" />
+              <rect x="50" y="45" width="100" height="30" rx="5" fill="none" stroke="#0f3c5f" stroke-width="1.5" />
+              <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">VR CAR PAINTING</text>
+            </svg>
+          </div>
+          <div class="game-card-info">
+            <h4 class="game-card-title">VR Car Paint Training</h4>
+            <p class="game-card-desc">High-precision virtual spray-paint trainer.</p>
+            <span class="game-card-action">Inspect Dossier <i class="fa-solid fa-arrow-right"></i></span>
           </div>
         </article>
 
-        <!-- Placeholder 5 -->
-        <article class="game-portfolio-card disabled-card" style="background-color: #fafafa; border: 1px dashed #d1d5db; display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; min-height: 280px;">
-          <div style="color: var(--text-muted);">
-            <i class="fa-solid fa-cubes" style="font-size: 1.8rem; margin-bottom: 0.75rem; display: block; opacity: 0.5;"></i>
-            <h4 style="font-family: var(--font-serif); font-size: 0.95rem; margin-bottom: 0.25rem; font-weight: 600; color: var(--text-muted);">None</h4>
-            <p style="font-size: 0.75rem; line-height: 1.4; margin: 0; opacity: 0.7;">Pipeline Project Slot</p>
+        <!-- Project 8 -->
+        <article class="game-portfolio-card" onclick="selectProject('immersive-reality', 2)">
+          <div class="game-card-thumbnail">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="120" fill="#f3f4f6" />
+              <line x1="30" y1="60" x2="170" y2="60" stroke="#0f3c5f" stroke-width="2" />
+              <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">VR NURSING ANIMATION</text>
+            </svg>
+          </div>
+          <div class="game-card-info">
+            <h4 class="game-card-title">VR Nursing Distraction</h4>
+            <p class="game-card-desc">VR pediatric vaccination anxiety relief tool.</p>
+            <span class="game-card-action">Inspect Dossier <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="paper-divider-double"></div>
+
+    <!-- Section III: Research -->
+    <section class="paper-section" id="research-section">
+      <h2 class="section-title"><span class="section-num">III.</span> RESEARCH</h2>
+      <p class="section-paragraph">
+        Advanced research initiatives combining computer vision, AI detection, and smart assistive robotics:
+      </p>
+
+      <div class="game-portfolio-grid">
+        <!-- Project 9 -->
+        <article class="game-portfolio-card" onclick="selectProject('research', 0)">
+          <div class="game-card-thumbnail">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="120" fill="#f3f4f6" />
+              <circle cx="100" cy="60" r="20" fill="none" stroke="#0f3c5f" stroke-width="2" />
+              <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">AI DETECTOR</text>
+            </svg>
+          </div>
+          <div class="game-card-info">
+            <h4 class="game-card-title">AI Camera Detection</h4>
+            <p class="game-card-desc">Pedestrian smartphone usage tracking system.</p>
+            <span class="game-card-action">Inspect Dossier <i class="fa-solid fa-arrow-right"></i></span>
           </div>
         </article>
 
-        <!-- Placeholder 6 -->
-        <article class="game-portfolio-card disabled-card" style="background-color: #fafafa; border: 1px dashed #d1d5db; display: flex; align-items: center; justify-content: center; padding: 1.5rem; text-align: center; min-height: 280px;">
-          <div style="color: var(--text-muted);">
-            <i class="fa-solid fa-cubes" style="font-size: 1.8rem; margin-bottom: 0.75rem; display: block; opacity: 0.5;"></i>
-            <h4 style="font-family: var(--font-serif); font-size: 0.95rem; margin-bottom: 0.25rem; font-weight: 600; color: var(--text-muted);">None</h4>
-            <p style="font-size: 0.75rem; line-height: 1.4; margin: 0; opacity: 0.7;">Pipeline Project Slot</p>
+        <!-- Project 10 -->
+        <article class="game-portfolio-card" onclick="selectProject('research', 1)">
+          <div class="game-card-thumbnail">
+            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="120" fill="#f3f4f6" />
+              <rect x="70" y="35" width="60" height="50" rx="3" fill="none" stroke="#0f3c5f" stroke-width="1.5" />
+              <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">MEDMATE DISPENSER</text>
+            </svg>
+          </div>
+          <div class="game-card-info">
+            <h4 class="game-card-title">Medmate Automated Dispenser</h4>
+            <p class="game-card-desc">Smart automatic pill dispenser for the elderly.</p>
+            <span class="game-card-action">Inspect Dossier <i class="fa-solid fa-arrow-right"></i></span>
           </div>
         </article>
       </div>
@@ -166,63 +263,54 @@
 
     <div class="paper-divider-double divider-reveal" id="feature-divider"></div>
 
-    <!-- Section II: Featured Project Analysis -->
+    <!-- Section IV: Detailed Case Analysis -->
     <section class="paper-section details-reveal-section" id="project-details" style="position: relative;">
-      <h2 class="section-title"><span class="section-num">II.</span> DETAILED CASE ANALYSIS</h2>
+      <h2 class="section-title"><span class="section-num">IV.</span> DETAILED CASE ANALYSIS</h2>
       
       <!-- New Floating Circular Close Button -->
       <button class="close-details-btn-round" id="close-project-details" aria-label="Close details">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
-      <div class="project-details-content">
-        <div class="project-details-grid">
-          <div class="project-details-text-side">
-            <span class="project-details-tag" id="detail-project-tag">01: CARBON INDEX</span>
-            <h3 class="project-details-title" id="detail-project-title">CMU Carbon Footprint</h3>
-            <p class="project-details-authors" id="detail-project-authors">ERDI-CMU, Faculty of Engineering</p>
-            
-            <div class="tech-specs-grid">
-              <div class="spec-item">
-                <span class="spec-label"><i class="fa-solid fa-layer-group"></i> Stack:</span>
-                <span class="spec-val" id="detail-spec-tech">WebGL / Three.js / IoT API</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label"><i class="fa-solid fa-laptop-code"></i> Platform:</span>
-                <span class="spec-val" id="detail-spec-platform">Web Dashboard</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label"><i class="fa-solid fa-circle-check"></i> Status:</span>
-                <span class="spec-val spec-badge" id="detail-spec-status">Active Deployment</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label"><i class="fa-solid fa-handshake"></i> Partner:</span>
-                <span class="spec-val" id="detail-spec-collab">Faculty of Engineering</span>
-              </div>
-            </div>
+      <div class="project-dossier-grid">
+        <!-- Left Side: Our Showcase -->
+        <div class="project-dossier-showcase">
+          <div class="dossier-showcase-title">OUR SHOWCASE</div>
+          <div class="dossier-showcase-placeholder">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5" />
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Inter" font-size="14" fill="#9ca3af">รูปภาพ (Our Showcase)</text>
+            </svg>
+          </div>
+        </div>
 
-            <p class="project-details-abstract justify-text" id="detail-project-abstract">
-              Real-time 3D Carbon Emission Dashboard for CMU.
-            </p>
-            
-            <div class="centered-cta-container">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="visit-project-btn" id="detail-project-link">
-                <i class="fa-solid fa-paper-plane"></i>
-                <span>Launch Project Platform</span>
-              </a>
+        <!-- Right Side: Project Info -->
+        <div class="project-dossier-info">
+          <h3 class="dossier-project-title" id="dossier-title">Project Title</h3>
+          <span class="dossier-category" id="dossier-category">Category</span>
+          
+          <div class="dossier-meta-section">
+            <h4 class="dossier-sub-header">Article Info</h4>
+            <div class="dossier-meta-grid">
+              <div class="dossier-meta-item">
+                <span class="meta-label">Category</span>
+                <span class="meta-value" id="dossier-meta-cat">-</span>
+              </div>
+              <div class="dossier-meta-item">
+                <span class="meta-label">Published</span>
+                <span class="meta-value" id="dossier-meta-published">-</span>
+              </div>
+              <div class="dossier-meta-item">
+                <span class="meta-label">Updated</span>
+                <span class="meta-value" id="dossier-meta-updated">-</span>
+              </div>
             </div>
           </div>
-          <div class="project-details-preview-side">
-            <div class="details-window-frame">
-              <div class="window-bar">
-                <span class="window-dot red"></span>
-                <span class="window-dot yellow"></span>
-                <span class="window-dot green"></span>
-                <span class="window-title">Dossier Visualizer</span>
-              </div>
-              <div class="window-content" id="detail-project-preview">
-                <!-- SVG preview will be injected here dynamically -->
-              </div>
+
+          <div class="dossier-about-section">
+            <h4 class="dossier-sub-header">About Project</h4>
+            <div class="dossier-desc-container" id="dossier-desc-container">
+              <!-- Descriptive paragraphs in Thai populated dynamically -->
             </div>
           </div>
         </div>
@@ -276,88 +364,149 @@
   </footer>
 
   <script>
-    const PROJECTS_DATA = [
-      {
-        tag: "01: CARBON INDEX",
-        title: "CMU Carbon Footprint",
-        authors: "ERDI-CMU, Faculty of Engineering",
-        abstract: "A real-time 3D carbon emission monitoring dashboard designed for Chiang Mai University. Integrated with the IoT sensing grid and ESG metrics, it allows university planners to track net-zero targets and simulate carbon index fluctuations based on live campus operations.",
-        tech: "WebGL / Three.js / IoT API",
-        platform: "Web Dashboard",
-        status: "Active Deployment",
-        collab: "ERDI-CMU, Faculty of Engineering",
-        link: "https://netzero-cmu-phase-2.vercel.app",
-        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-                <rect width="200" height="120" fill="#f3f4f6" />
-                <path d="M20,100 L60,80 L100,90 L140,50 L180,60" fill="none" stroke="#0f3c5f" stroke-width="2"/>
-                <circle cx="20" cy="100" r="4" fill="#0f3c5f"/>
-                <circle cx="60" cy="80" r="4" fill="#0f3c5f"/>
-                <circle cx="100" cy="90" r="4" fill="#0f3c5f"/>
-                <circle cx="140" cy="50" r="4" fill="#0f3c5f"/>
-                <circle cx="180" cy="60" r="4" fill="#0f3c5f"/>
-                <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">NETZERO-CMU 3D</text>
-              </svg>`
-      },
-      {
-        tag: "02: MARINE BIO",
-        title: "Coral College",
-        authors: "Marine Conservation Platform",
-        abstract: "An interactive, game-based learning platform for marine biology and coral reef conservation. Built to educate school students about marine biodiversity, climate change impact, and reef recovery initiatives in Thailand, offering interactive quizzes and virtual 3D coral viewing.",
-        tech: "React / Three.js / WebGL",
-        platform: "Web Application",
-        status: "Active Production",
-        collab: "Marine Conservation Platform",
-        link: "https://coralcollegethailand.org/",
-        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-                <rect width="200" height="120" fill="#f3f4f6" />
-                <path d="M100,100 C80,80 70,50 100,20 C130,50 120,80 100,100 Z" fill="none" stroke="#0284c7" stroke-width="2"/>
-                <path d="M70,80 Q100,60 130,80" fill="none" stroke="#0f3c5f" stroke-width="1.5" stroke-dasharray="4 2"/>
-                <text x="15" y="30" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">CORAL EDUCATION</text>
-              </svg>`
-      },
-      {
-        tag: "03: URBAN PLANNING",
-        title: "Smart & Livable City",
-        authors: "Smart City Thailand Development Group",
-        abstract: "A comprehensive urban planning visualization suite compiling real-time environmental data, noise maps, particulate matter index (PM2.5), and citizen reporting to support municipal decision-making in Northern Thailand.",
-        tech: "GIS Engine / Vue.js / Node.js",
-        platform: "Web & Spatial Platform",
-        status: "Active Deployment",
-        collab: "Smart City Thailand Group",
-        link: "https://smartlivablecityth.com/",
-        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-                <rect width="200" height="120" fill="#f3f4f6" />
-                <rect x="30" y="50" width="30" height="50" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
-                <rect x="70" y="30" width="40" height="70" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
-                <rect x="120" y="60" width="35" height="40" fill="none" stroke="#0f3c5f" stroke-width="1.5"/>
-                <text x="15" y="25" font-family="Inter" font-size="10" fill="#6b7280" font-weight="bold">URBAN MAPPING</text>
-              </svg>`
-      }
-    ];
+    const PROJECTS_DATA = {
+      "digital-twins": [
+        {
+          title: "Web Application for Queen Sirikit Botanic Garden: Immersive AR Tourism",
+          category: "Digital Twins-IoT & Visualisation",
+          published: "9/22/2025",
+          updated: "9/22/2025",
+          about: "เว็บแอปฯ AR ที่จะเปลี่ยนสวนพฤกษศาสตร์ให้กลายเป็นพิพิธภัณฑ์ธรรมชาติเสมือนจริง ให้คุณสัมผัสและเรียนรู้เรื่องราวของสัตว์หายากที่เคยอาศัยอยู่ในพื้นที่ได้แบบ 3D",
+          history: "ความเป็นมาและการสร้างสรรค์: เราไม่ได้สร้างแค่แอปพลิเคชัน แต่เราสร้างประตูมิติที่จะพาผู้คนย้อนเวลากลับไปสำรวจความลับของสวนพฤกษศาสตร์สมเด็จพระนางเจ้าสิริกิติ์ ในยุคที่ผู้คนคุ้นเคยกับการใช้หน้าจอมากกว่าการมองโลกจริง โปรเจกต์นี้จึงเป็นความท้าทายในการผสานโลกดิจิทัลเข้ากับความงามของธรรมชาติอย่างลงตัว เราได้ผสานเทคโนโลยี AR (Augmented Reality) ที่ล้ำสมัยเข้ากับข้อมูลทางชีวภาพที่ถูกต้องเพื่อสร้างสรรค์ประสบการณ์ที่เหนือกว่าการเดินชมสวนธรรมดา",
+          exciting: "สิ่งที่น่าตื่นเต้น: ลองจินตนาการดูสิครับว่า คุณกำลังเดินอยู่บนเส้นทางศึกษาธรรมชาติที่ร่มรื่น และเมื่อคุณยกสมาร์ทโฟนขึ้นมาส่องไปยังพุ่มไม้ข้างทาง โมเดล 3 มิติ ของสัตว์ป่าหายากที่เคยอาศัยอยู่ในพื้นที่นี้เมื่อหลายสิบปีก่อนก็ปรากฏขึ้นมาต่อหน้าต่อตา! ไม่ว่าจะเป็นนกหายากที่กำลังโฉบเฉี่ยวไปมา หรือสัตว์อื่นๆ ที่คุณไม่เคยเห็นมาก่อน ทุกอย่างจะปรากฏขึ้นมาเสมือนจริง และที่สำคัญคือ ข้อมูลเชิงลึกของสัตว์แต่ละชนิดจะถูกแสดงขึ้นมาพร้อมกัน ทำให้คุณได้เรียนรู้เรื่องราวของพวกมันได้อย่างสนุกสนาน ไม่ใช่แค่การอ่านป้ายข้อมูลที่น่าเบื่ออีกต่อไป นี่คือการสร้างประสบการณ์การท่องเที่ยวแห่งอนาคตที่ผสมผสานความรู้ ความสนุก และความมหัศจรรย์เข้าไว้ด้วยกันอย่างลงตัว"
+        },
+        {
+          title: "AR Spiritual Tourism Web App: Themed Routes in Chiang Mai",
+          category: "Digital Twins-IoT & Visualisation",
+          published: "9/22/2025",
+          updated: "9/22/2025",
+          about: "เว็บแอปฯ ท่องเที่ยว AR ที่จะพาคุณไปสัมผัสเสน่ห์ของเชียงใหม่ผ่าน 3 เส้นทางพิเศษ \"ศรัทธา ความรัก และความเชื่อ\" พร้อมเกม AR สุดท้าทายในทุกวัด",
+          history: "ความเป็นมาและการสร้างสรรค์: จังหวัดเชียงใหม่ไม่ได้มีดีแค่ภูเขาและคาเฟ่ แต่ยังมีเสน่ห์ของวัฒนธรรมและจิตวิญญาณที่ลึกซึ้ง เราอยากปลดล็อกมิติใหม่ของการท่องเที่ยวเชิงวัฒนธรรม จึงได้พัฒนาเว็บแอปพลิเคชันที่ใช้เทคโนโลยี AR เพื่อนำเสนอเส้นทางการท่องเที่ยวที่ไม่เหมือนใคร เราไม่ได้แค่บอกว่า \"ไปวัดไหน\" แต่เราสร้าง \"เส้นทางการเดินทาง\" ที่เชื่อมโยงความเชื่อและความรู้สึกเข้าไว้ด้วยกันอย่างเป็นระบบ",
+          exciting: "สิ่งที่น่าตื่นเต้น: คุณสามารถเลือกเส้นทางที่คุณสนใจได้เลย ไม่ว่าจะเป็น \"เส้นทางศรัทธา\" ที่จะพาคุณไปค้นพบเรื่องราวความเชื่อทางศาสนาที่ศักดิ์สิทธิ์, \"เส้นทางความรัก\" ที่จะพาคุณไปสัมผัสตำนานและสถานที่ที่เกี่ยวข้องกับความรักในอดีต, หรือ \"เส้นทางความเชื่อ\" ที่จะพาคุณไปสำรวจความลี้ลับของตำนานพื้นบ้าน และที่พิเศษสุดๆ คือในแต่ละวัดจะมี เกม AR ที่ซ่อนอยู่! เช่น การตามหาวัตถุโบราณเสมือนจริง, การไขปริศนาทางประวัติศาสตร์ หรือการทำภารกิจที่เกี่ยวข้องกับเรื่องราวของวัดนั้นๆ ทำให้การไหว้พระทำบุญของคุณสนุกและมีสีสันยิ่งขึ้น นี่คือการท่องเที่ยวที่ผสมผสานศรัทธากับความสนุกได้อย่างลงตัว"
+        },
+        {
+          title: "CAMT Digital Twins Web Application: 3D Data Visualisation",
+          category: "Digital Twins-IoT & Visualisation",
+          published: "9/22/2025",
+          updated: "9/22/2025",
+          about: "เว็บแอปฯ ที่สร้างแฝดดิจิทัลของอาคาร CAMT เพื่อแสดงผลข้อมูลจาก IoT Sensor แบบเรียลไทม์ในรูปแบบ 3D ช่วยให้การจัดการอาคารเป็นเรื่องง่ายและชาญฉลาด",
+          history: "ความเป็นมาและการสร้างสรรค์: เราเชื่อว่าข้อมูลที่ซับซ้อนก็สามารถนำเสนอได้อย่างสวยงามและเข้าใจง่าย โปรเจกต์นี้จึงเป็นการนำแนวคิด Digital Twins หรือการสร้าง \"แฝดดิจิทัล\" ของอาคารจริงมาประยุกต์ใช้เพื่อเป็นเครื่องมือในการบริหารจัดการอาคารในยุคดิจิทัล แทนที่จะต้องนั่งวิเคราะห์ข้อมูลในรูปแบบกราฟหรือตารางที่ซับซ้อน เรานำเสนอทุกอย่างในรูปแบบ โมเดล 3 มิติ ที่เสมือนจริงจนน่าทึ่ง",
+          exciting: "สิ่งที่น่าตื่นเต้น: Web Application นี้เปรียบเสมือนศูนย์บัญชาการเสมือนจริงของอาคาร CAMT คุณสามารถมองเห็นอาคารในรูปแบบ 3 มิติได้อย่างละเอียด และที่สำคัญคือ ข้อมูลจาก เซนเซอร์ IoT ที่กระจายอยู่ทั่วอาคารจะถูกแสดงผลแบบ เรียลไทม์ บนโมเดล 3 มิตินี้เลยครับ! คุณสามารถดูอุณหภูมิของแต่ละห้อง, ระดับความชื้น, หรือแม้แต่การใช้พลังงานของแต่ละพื้นที่ได้ในทันที ทำให้ผู้ดูแลอาคารสามารถตรวจสอบสถานะและแก้ไขปัญหาได้อย่างรวดเร็วและแม่นยำ นี่ไม่ใช่แค่การแสดงข้อมูล แต่เป็นการสร้างเครื่องมือที่ทำให้การจัดการอาคารเป็นเรื่องที่ชาญฉลาดและมีประสิทธิภาพอย่างแท้จริง"
+        },
+        {
+          title: "CMU Carbon footprint web application (Front-end)",
+          category: "Digital Twins-IoT & Visualisation",
+          published: "9/22/2025",
+          updated: "9/22/2025",
+          about: "เว็บแอปฯ ที่แสดงข้อมูล Carbon Emission ในรูปแบบ 3D ช่วยให้การติดตามและทำความเข้าใจปริมาณคาร์บอนฟุตพรินท์ของมหาวิทยาลัยเป็นเรื่องง่ายและน่าสนใจ",
+          history: "",
+          exciting: ""
+        },
+        {
+          title: "Platform Digital Twin for Buildings (Web 3D & Sensors)",
+          category: "Digital Twins-IoT & Visualisation",
+          published: "Pending",
+          updated: "Pending",
+          about: "Platform Digital Twin สำหรับอาคาร ด้วย Web 3D และ Sensor (อยู่ระหว่างการรวบรวมเนื้อหาและพัฒนา)",
+          history: "",
+          exciting: ""
+        }
+      ],
+      "immersive-reality": [
+        {
+          title: "VR Safety Training for Murata Company",
+          category: "Immersive reality and games",
+          published: "9/22/2025",
+          updated: "9/22/2025",
+          about: "ระบบอบรมความปลอดภัยในโรงงานด้วย VR ที่สมจริง ช่วยให้พนักงานเรียนรู้และฝึกซ้อมการรับมือสถานการณ์อันตรายได้อย่างปลอดภัยโดยไม่ต้องเสี่ยง",
+          history: "ความเป็นมาและการสร้างสรรค์: การฝึกอบรมความปลอดภัยในโรงงานแบบเดิมๆ มักมีข้อจำกัดด้านเวลา สถานที่ และที่สำคัญคือ \"ความเสี่ยง\" ที่อาจเกิดขึ้นได้ เราจึงได้พัฒนา VR Training Simulation ที่ไม่ใช่แค่การจำลอง แต่เป็นการสร้างโลกเสมือนจริงที่ปลอดภัยและควบคุมได้ เพื่อให้พนักงานได้เรียนรู้และฝึกฝนจนกว่าจะเกิดความชำนาญ",
+          exciting: "สิ่งที่น่าตื่นเต้น: เมื่อพนักงานสวมอุปกรณ์ VR พวกเขาจะก้าวเข้าสู่สภาพแวดล้อมเสมือนจริงของโรงงาน Murata ที่มีรายละเอียดครบถ้วน พวกเขาจะได้เรียนรู้วิธีการใช้งานเครื่องจักรที่อันตราย, การปฏิบัติตามกฎความปลอดภัยที่เข้มงวด, และฝึกซ้อมการรับมือกับสถานการณ์ฉุกเฉินต่างๆ ที่อาจเกิดขึ้นได้ เช่น ไฟไหม้ หรือสารเคมีรั่วไหล ทุกการเคลื่อนไหวจะถูกบันทึกและประเมินผล ทำให้พนักงานสามารถเห็นจุดแข็งและจุดที่ต้องปรับปรุงของตัวเองได้อย่างชัดเจน นี่คือการฝึกอบรมที่สามารถทำได้ซ้ำๆ จนกว่าพนักงานจะมั่นใจในความปลอดภัยของตัวเองและเพื่อนร่วมงาน"
+        },
+        {
+          title: "VR Training for Car Paint Factory",
+          category: "Immersive reality and games",
+          published: "9/22/2025",
+          updated: "9/22/2025",
+          about: "โปรแกรมฝึกอบรมการพ่นสีรถยนต์ด้วย VR ที่สมจริง ช่วยให้พนักงานพัฒนาทักษะและความแม่นยำได้อย่างรวดเร็วโดยไม่ต้องสิ้นเปลืองทรัพยากร",
+          history: "ความเป็นมาและการสร้างสรรค์: การพ่นสีรถยนต์ไม่ใช่แค่ศิลปะ แต่ต้องอาศัยทักษะทางเทคนิคที่แม่นยำ ซึ่งต้องอาศัยการฝึกฝนอย่างหนักหน่วงด้วยอุปกรณ์จริง ซึ่งมีต้นทุนสูงทั้งในเรื่องของสี, วัสดุ, และการทำความสะอาด เราจึงนำเทคโนโลยี VR มาใช้เพื่อสร้าง \"ห้องฝึกฝน\" ที่ไร้ขีดจำกัด",
+          exciting: "สิ่งที่น่าตื่นเต้น: พนักงานฝึกหัดสามารถสวมแว่น VR และจับ \"หัวพ่นสีเสมือนจริง\" เพื่อเริ่มฝึกฝนได้ทันที ไม่ว่าจะเป็นการฝึกการควบคุมน้ำหนักมือ, การรักษาระยะห่างจากพื้นผิว, หรือการสร้างความหนาของชั้นสีให้สม่ำเสมอ ทุกอย่างจะถูกจำลองขึ้นมาอย่างสมจริงจนแยกไม่ออกระหว่างโลกจริงกับโลกเสมือนจริง และที่เจ๋งสุดๆ คือระบบสามารถประเมินผลการพ่นสีแบบ เรียลไทม์ ได้เลยว่ามีจุดไหนที่พ่นบางไป หนาไป หรือไม่เรียบเนียน ทำให้พนักงานสามารถเรียนรู้จากข้อผิดพลาดและพัฒนาทักษะของตนเองได้อย่างก้าวกระโดดโดยไม่ต้องสิ้นเปลืองทรัพยากรเลยแม้แต่น้อย"
+        },
+        {
+          title: "VR Animation for Injection Training – Faculty of Nursing, CMU",
+          category: "Immersive reality and games",
+          published: "9/22/2025",
+          updated: "9/22/2025",
+          about: "แอนิเมชัน VR เพื่อเบี่ยงเบนความสนใจของเด็กก่อนฉีดยา ทำให้ประสบการณ์การฉีดยาของเด็กๆ ไม่น่ากลัวอีกต่อไป",
+          history: "",
+          exciting: ""
+        }
+      ],
+      "research": [
+        {
+          title: "AI Camera Detection",
+          category: "Research",
+          published: "9/22/2025",
+          updated: "9/22/2025",
+          about: "โปรเจกต์วิจัย AI Camera ที่พัฒนาขึ้นเพื่อตรวจจับและติดตามบุคคลบนทางเท้าที่กำลังใช้งานโทรศัพท์มือถือขณะเดิน",
+          history: "",
+          exciting: ""
+        },
+        {
+          title: "Medmate: Automated Medicine Dispenser",
+          category: "Research",
+          published: "9/22/2025",
+          updated: "9/22/2025",
+          about: "Medmate: อุปกรณ์จ่ายยาอัตโนมัติสำหรับผู้สูงอายุ ช่วยให้การทานยาเป็นไปอย่างถูกต้องและตรงเวลา ลดภาระของผู้ดูแล",
+          history: "ความเป็นมาและการสร้างสรรค์: ภาระของผู้ดูแลผู้สูงอายุในการจัดยาให้ตรงเวลาและถูกต้องเป็นเรื่องที่ท้าทายมาก เราจึงได้คิดค้น Medmate อุปกรณ์จ่ายยาอัตโนมัติที่ถูกออกแบบมาเพื่อลดความผิดพลาดและเพิ่มความสะดวกสบายในการดูแลผู้สูงอายุให้มีคุณภาพชีวิตที่ดีขึ้น",
+          exciting: "สิ่งที่น่าตื่นเต้น: Medmate ไม่ใช่แค่กล่องใส่ยาธรรมดา แต่เป็นระบบอัจฉริยะที่ผู้ดูแลสามารถตั้งค่าการจ่ายยาได้ล่วงหน้าเป็นรายวันหรือรายสัปดาห์เลยครับ เมื่อถึงเวลาที่กำหนด อุปกรณ์จะส่งสัญญาณเตือนด้วยเสียงและแสงเพื่อให้ผู้สูงอายุรู้ว่าถึงเวลาทานยาแล้ว จากนั้นช่องใส่ยาที่ถูกต้องจะเปิดออกโดยอัตโนมัติ ทำให้หมดปัญหาเรื่องการลืมทานยาหรือทานยาผิดเวลา และที่สำคัญคือ Medmate สามารถส่งข้อมูลการทานยาไปยังแอปพลิเคชันของผู้ดูแลได้ ทำให้มั่นใจได้ว่าผู้สูงอายุได้รับยาครบถ้วนและตรงตามแผน นี่คือการนำเทคโนโลยีมาใช้เพื่อสร้างความสัมพันธ์ที่ดีและยกระดับการดูแลให้ดีกว่าเดิมครับ"
+        }
+      ]
+    };
 
-    function selectProject(idx) {
-      const data = PROJECTS_DATA[idx];
+    function selectProject(category, idx) {
+      const data = PROJECTS_DATA[category][idx];
       if (!data) return;
 
-      document.getElementById('detail-project-tag').textContent = data.tag;
-      document.getElementById('detail-project-title').textContent = data.title;
-      document.getElementById('detail-project-authors').textContent = data.authors;
-      document.getElementById('detail-project-abstract').textContent = data.abstract;
+      document.getElementById('dossier-title').textContent = data.title;
+      document.getElementById('dossier-category').textContent = data.category;
+      document.getElementById('dossier-meta-cat').textContent = data.category;
+      document.getElementById('dossier-meta-published').textContent = data.published;
+      document.getElementById('dossier-meta-updated').textContent = data.updated;
+
+      // Populate description
+      const descContainer = document.getElementById('dossier-desc-container');
+      descContainer.innerHTML = '';
       
-      document.getElementById('detail-spec-tech').textContent = data.tech;
-      document.getElementById('detail-spec-platform').textContent = data.platform;
-      document.getElementById('detail-spec-status').textContent = data.status;
-      document.getElementById('detail-spec-collab').textContent = data.collab;
-      
-      document.getElementById('detail-project-link').setAttribute('href', data.link);
-      document.getElementById('detail-project-preview').innerHTML = data.svg;
+      const pAbout = document.createElement('p');
+      pAbout.className = 'justify-text';
+      pAbout.style.fontWeight = '600';
+      pAbout.textContent = data.about;
+      descContainer.appendChild(pAbout);
+
+      if (data.history) {
+        const pHistory = document.createElement('p');
+        pHistory.className = 'justify-text';
+        pHistory.textContent = data.history;
+        descContainer.appendChild(pHistory);
+      }
+
+      if (data.exciting) {
+        const pExciting = document.createElement('p');
+        pExciting.className = 'justify-text';
+        pExciting.textContent = data.exciting;
+        descContainer.appendChild(pExciting);
+      }
 
       // Update card active states
       const cards = document.querySelectorAll('.game-portfolio-card');
-      cards.forEach((card, i) => {
-        if (i === idx) card.classList.add('active-card');
-        else card.classList.remove('active-card');
-      });
+      cards.forEach(card => card.classList.remove('active-card'));
+      
+      // Find the clicked card and set active
+      if (window.event && window.event.currentTarget) {
+        window.event.currentTarget.classList.add('active-card');
+      } else if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active-card');
+      }
 
       const element = document.getElementById('project-details');
       const divider = document.getElementById('feature-divider');
@@ -387,7 +536,7 @@
           if (element) element.classList.remove('revealed');
           if (divider) divider.classList.remove('revealed');
           
-          const portfolio = document.getElementById('portfolio-section');
+          const portfolio = document.getElementById('digital-twins-section');
           if (portfolio) {
             setTimeout(() => {
               const offset = 90;
