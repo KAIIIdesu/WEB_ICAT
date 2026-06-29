@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- Folder 1: ICAT IoT (External link) -->
           <div class="icat-grid-item link-item" data-url="https://icat-iot.web.app" data-keywords="icat iot internet web app link external">
             <div class="icat-icon-wrapper">
-              <i class="fa-solid fa-cloud-arrow-up network-icon-blue"></i>
+              <i class="fa-solid fa-folder folder-main-icon network-icon-blue"></i>
+              <i class="fa-solid fa-folder-open folder-open-icon network-icon-blue"></i>
             </div>
             <span class="icat-icon-label">ICAT IoT</span>
           </div>
@@ -57,7 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- Folder 2: Whisper Of Anima (External link) -->
           <div class="icat-grid-item link-item" data-url="https://www.youtube.com/watch?v=0dcG38iSdvw" data-keywords="whisper of anima youtube video clip presentation unreal game">
             <div class="icat-icon-wrapper">
-              <i class="fa-brands fa-youtube youtube-icon-red"></i>
+              <i class="fa-solid fa-folder folder-main-icon youtube-icon-red"></i>
+              <i class="fa-solid fa-folder-open folder-open-icon youtube-icon-red"></i>
             </div>
             <span class="icat-icon-label">Whisper of Anima</span>
           </div>
@@ -65,7 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- Folder 3: Presentation (External link) -->
           <div class="icat-grid-item link-item" data-url="https://www.canva.com/design/DAGPlUgsBmQ/UmNTxmGYy1dFL3yyzQ1hxA/view?embed#1" data-keywords="presentation slides canva design research layout info">
             <div class="icat-icon-wrapper">
-              <i class="fa-solid fa-file-powerpoint presentation-icon-orange"></i>
+              <i class="fa-solid fa-folder folder-main-icon presentation-icon-orange"></i>
+              <i class="fa-solid fa-folder-open folder-open-icon presentation-icon-orange"></i>
             </div>
             <span class="icat-icon-label">Presentation</span>
           </div>
@@ -73,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- Folder 4: Summary (External link) -->
           <div class="icat-grid-item link-item" data-url="https://www.canva.com/design/DAHLl9Z4kwA/soJ1x_6d7ZyehRbo_o6QYg/view?embed" data-keywords="summary document canva overview sheet quick guide report">
             <div class="icat-icon-wrapper">
-              <i class="fa-solid fa-file-contract summary-icon-teal"></i>
+              <i class="fa-solid fa-folder folder-main-icon summary-icon-teal"></i>
+              <i class="fa-solid fa-folder-open folder-open-icon summary-icon-teal"></i>
             </div>
             <span class="icat-icon-label">Summary</span>
           </div>
@@ -89,8 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- Folder 6: Live Telemetry (Internal view) -->
           <div class="icat-grid-item folder-item" data-folder="telemetry" data-keywords="live telemetry system monitoring cpu gpu load iot status sensor stats performance">
             <div class="icat-icon-wrapper">
-              <i class="fa-solid fa-folder folder-main-icon"></i>
-              <i class="fa-solid fa-folder-open folder-open-icon"></i>
+              <i class="fa-solid fa-chart-line telemetry-main-icon"></i>
               <span class="telemetry-dot"></span>
             </div>
             <span class="icat-icon-label">Live Telemetry</span>
@@ -99,8 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- Folder 7: Lab Network (Internal view) -->
           <div class="icat-grid-item folder-item" data-folder="network" data-keywords="lab network directory staff contact email links camt cmu faculty">
             <div class="icat-icon-wrapper">
-              <i class="fa-solid fa-folder folder-main-icon"></i>
-              <i class="fa-solid fa-folder-open folder-open-icon"></i>
+              <i class="fa-solid fa-network-wired network-main-icon"></i>
             </div>
             <span class="icat-icon-label">Lab Network</span>
           </div>

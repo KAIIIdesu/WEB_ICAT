@@ -1905,6 +1905,14 @@ body {
   color: #15803d !important;
 }
 
+.telemetry-main-icon {
+  color: #15803d !important;
+}
+
+.network-main-icon {
+  color: #1d4ed8 !important;
+}
+
 .folder-main-icon {
   color: #b45309 !important; /* Classic dark amber folder */
 }
