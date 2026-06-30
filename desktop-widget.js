@@ -607,4 +607,49 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // 3. Dynamic Mobile Hamburger Navigation Menu Toggle
+  function initMobileNav() {
+    const navContainer = document.querySelector('.nav-container');
+    if (!navContainer) return;
+
+    // Check if toggle already exists
+    if (navContainer.querySelector('.mobile-nav-toggle')) return;
+
+    const navLinks = navContainer.querySelector('.nav-links');
+    if (!navLinks) return;
+
+    // Create hamburger toggle button
+    const toggleButton = document.createElement('button');
+    toggleButton.className = 'mobile-nav-toggle';
+    toggleButton.setAttribute('aria-label', 'Toggle Navigation');
+    toggleButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    
+    // Append to navContainer
+    navContainer.appendChild(toggleButton);
+
+    // Toggle menu state on click
+    toggleButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navLinks.classList.toggle('mobile-menu-open');
+      
+      // Toggle icon between bars and X
+      const icon = toggleButton.querySelector('i');
+      if (navLinks.classList.contains('mobile-menu-open')) {
+        icon.className = 'fa-solid fa-xmark';
+      } else {
+        icon.className = 'fa-solid fa-bars';
+      }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('mobile-menu-open') && !navLinks.contains(e.target) && !toggleButton.contains(e.target)) {
+        navLinks.classList.remove('mobile-menu-open');
+        toggleButton.querySelector('i').className = 'fa-solid fa-bars';
+      }
+    });
+  }
+
+  initMobileNav();
 });
