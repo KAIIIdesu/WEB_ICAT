@@ -83,14 +83,14 @@
 
       <div class="staff-dir-grid">
         <!-- Lecturer 1 -->
-        <div class="staff-dir-card">
+        <div class="staff-dir-card staff-dir-card--clickable" id="card-thepparit" role="button" tabindex="0" aria-label="Thepparit Sinthamrongruk – Click to read research articles" onclick="openResearchModal()" onkeydown="if(event.key==='Enter'||event.key===' ')openResearchModal()">
           <div class="staff-dir-picture-placeholder">
             <img src="Pic/STAFF/Thepparit.png" alt="Thepparit Sinthamrongruk">
           </div>
           <div class="staff-dir-details">
             <h4 class="staff-dir-name">Thepparit Sinthamrongruk, Ph.D.</h4>
             <p class="staff-dir-role">Director</p>
-            <p class="staff-dir-work"><i class="fa-solid fa-briefcase"></i> Optimisation & Smart System</p>
+            <p class="staff-dir-work"><i class="fa-solid fa-briefcase"></i> Optimisation &amp; Smart System</p>
             <p class="staff-dir-email"><i class="fa-regular fa-envelope"></i> thepparit.s@cmu.ac.th</p>
           </div>
         </div>
@@ -376,6 +376,211 @@
   </footer>
 
   <script src="desktop-widget.js"></script>
+
+  <!-- =====================================================================
+       RESEARCH PUBLICATIONS MODAL – Thepparit Sinthamrongruk, Ph.D.
+       ===================================================================== -->
+  <div id="research-modal-overlay" class="research-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="research-modal-title" onclick="handleModalOverlayClick(event)">
+    <div class="research-modal-panel" id="research-modal-panel">
+
+      <!-- Modal Header — Centered with gradient title -->
+      <div class="research-modal-header">
+        <div class="research-modal-header-center">
+          <span class="research-modal-label"><i class="fa-solid fa-flask"></i> RESEARCH OUTPUT</span>
+          <h2 class="research-modal-title" id="research-modal-title">Thepparit Sinthamrongruk, Ph.D.</h2>
+          <p class="research-modal-subtitle">Published Articles &amp; Conference Papers &mdash; sorted by latest first</p>
+        </div>
+        <button class="research-modal-close" id="research-modal-close" onclick="closeResearchModal()" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Publications List (newest → oldest by full date) -->
+      <div class="research-pub-list">
+
+        <!-- 1. Electronics — 2026/4/20 -->
+        <article class="research-pub-item">
+          <div class="research-pub-main">
+            <div class="research-pub-date-badge"><i class="fa-regular fa-calendar"></i> 20 Apr 2026</div>
+            <h3 class="research-pub-title">A Lightweight Web3D Digital Twin Framework for Real-Time ESG Monitoring Using IoT Sensors</h3>
+            <div class="research-pub-authors">
+              <span><i class="fa-solid fa-user"></i> Thepparit Sinthamrongruk</span>
+              <span><i class="fa-solid fa-user"></i> Keshav Dahal</span>
+              <span><i class="fa-solid fa-user"></i> Napat Harnpornchai</span>
+            </div>
+            <div class="research-pub-meta">
+              <span class="research-pub-venue"><i class="fa-solid fa-journal-whills"></i> <em>Electronics</em>, Vol. 15, No. 8, pp. 1736 &mdash; MDPI</span>
+            </div>
+            <div class="research-pub-abstract-box">
+              <p class="research-pub-abstract">This study proposes a lightweight Web3D-based digital twin framework for real-time ESG monitoring in smart buildings. The system integrates an independently developed IoT sensor network with a browser-native 3D visualization platform, enabling real-time monitoring of ESG indicators—including electricity consumption—without requiring proprietary software or dedicated rendering hardware. Validated through a 12-month real-world deployment with 60 IoT sensors, achieving 66 FPS rendering, 78 ms latency, and 98% sensor data consistency.</p>
+            </div>
+            <div class="research-pub-link-wrap">
+              <a href="https://www.mdpi.com/2079-9292/15/8/1736" target="_blank" rel="noopener noreferrer" class="research-pub-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read Full Article</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Journal of Clinical Medicine — 2026/4/13 -->
+        <article class="research-pub-item">
+          <div class="research-pub-main">
+            <div class="research-pub-date-badge"><i class="fa-regular fa-calendar"></i> 13 Apr 2026</div>
+            <h3 class="research-pub-title">Effects of Web-Based Physical&ndash;Cognitive Telerehabilitation Exergaming on Physical and Cognitive Performance in Chronic Stroke Survivors: Protocol for a Randomized Controlled Trial</h3>
+            <div class="research-pub-authors">
+              <span><i class="fa-solid fa-user"></i> Puntarik Keawtep</span>
+              <span><i class="fa-solid fa-user"></i> Sirinun Boripuntakul</span>
+              <span><i class="fa-solid fa-user"></i> Piangkwan Sa-Nguanmoo</span>
+              <span><i class="fa-solid fa-user"></i> Pranglada Jearjaroen</span>
+              <span><i class="fa-solid fa-user"></i> Cattaleeya Sittichoke</span>
+              <span><i class="fa-solid fa-user"></i> Teerawat Kamnardsiri</span>
+              <span><i class="fa-solid fa-user"></i> Thepparit Sinthamrongruk</span>
+              <span><i class="fa-solid fa-user"></i> Somporn Sungkarat</span>
+            </div>
+            <div class="research-pub-meta">
+              <span class="research-pub-venue"><i class="fa-solid fa-journal-whills"></i> <em>Journal of Clinical Medicine</em>, Vol. 15, No. 8, pp. 2945 &mdash; MDPI</span>
+            </div>
+            <div class="research-pub-abstract-box">
+              <p class="research-pub-abstract">This paper presents a protocol for a two-arm randomized controlled trial examining the effectiveness of a web-based physical&ndash;cognitive telerehabilitation exergaming program on motor function, balance, gait speed, fall risk, cognition, and enjoyment in chronic stroke survivors. Fifty-two participants will be randomly assigned to a 12-week intervention or a usual-care control group, with blinded assessors evaluating both physical and cognitive domains.</p>
+            </div>
+            <div class="research-pub-link-wrap">
+              <a href="https://www.mdpi.com/2077-0383/15/8/2945" target="_blank" rel="noopener noreferrer" class="research-pub-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read Full Article</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. ECTI DAMT & NCON — 2026/2/4 Smart Tourism -->
+        <article class="research-pub-item">
+          <div class="research-pub-main">
+            <div class="research-pub-date-badge"><i class="fa-regular fa-calendar"></i> 4 Feb 2026</div>
+            <h3 class="research-pub-title">Exploring Tourist Behavior and Usability Improvement for Smart Tourism in Secondary Cities: A Case Study of Lamphun Province</h3>
+            <div class="research-pub-authors">
+              <span><i class="fa-solid fa-user"></i> Pimsiri Suangswang</span>
+              <span><i class="fa-solid fa-user"></i> Thepparit Sinthamrongruk</span>
+              <span><i class="fa-solid fa-user"></i> Chalermpon Kongjit</span>
+              <span><i class="fa-solid fa-user"></i> Korawan Sangkakorn</span>
+            </div>
+            <div class="research-pub-meta">
+              <span class="research-pub-venue"><i class="fa-solid fa-users"></i> 2026 ECTI DAMT &amp; NCON, pp. 597&ndash;602 &mdash; IEEE</span>
+            </div>
+            <div class="research-pub-abstract-box">
+              <p class="research-pub-abstract">This study explores tourist behavior and usability improvement for tourism applications in Thailand's secondary cities, focusing on Lamphun Province as a pilot case. Data from 50 tourists who used or expressed interest in tram-based sightseeing services were analyzed using the 5A's of Tourism framework (Attraction, Accessibility, Accommodation, Amenities, and Activities) and ISO 9241-11 usability standards. Results show that most visitors travel for leisure and cultural purposes. Attraction and Accessibility performed strongly, while Activities and Amenities emerged as key areas needing enhancement. Usability analysis showed that Satisfaction scored slightly lower than Effectiveness and Efficiency, highlighting the need to strengthen engagement and emotional appeal. Correlation analysis identified exploratory associations between Accessibility and Satisfaction, and between Activities and both Satisfaction and Effectiveness. Based on these findings, four priority areas—Accessibility, Activities, Accommodation, and Amenities— were identified for design and functional improvement. Integrating the 5A's model with Design Thinking and usability frameworks offers a practical approach for developing user-centered smart tourism applications in secondary cities.</p>
+            </div>
+            <div class="research-pub-link-wrap">
+              <a href="https://ieeexplore.ieee.org/document/11459826" target="_blank" rel="noopener noreferrer" class="research-pub-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read Full Article</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. ECTI DAMT & NCON — 2026/2/4 Smart Parking -->
+        <article class="research-pub-item">
+          <div class="research-pub-main">
+            <div class="research-pub-date-badge"><i class="fa-regular fa-calendar"></i> 4 Feb 2026</div>
+            <h3 class="research-pub-title">A Discrete-Event Simulation Approach to Evaluate Smart Parking Policies for Carbon Reduction: A Case Study of a Thai University</h3>
+            <div class="research-pub-authors">
+              <span><i class="fa-solid fa-user"></i> Peeradech Wongkum</span>
+              <span><i class="fa-solid fa-user"></i> Chalermpon Kongjit</span>
+              <span><i class="fa-solid fa-user"></i> Thepparit Sinthamrongruk</span>
+            </div>
+            <div class="research-pub-meta">
+              <span class="research-pub-venue"><i class="fa-solid fa-users"></i> 2026 ECTI DAMT &amp; NCON, pp. 418&ndash;423 &mdash; IEEE</span>
+            </div>
+            <div class="research-pub-abstract-box">
+              <p class="research-pub-abstract">This paper evaluates smart parking policies using discrete-event simulation of a Chiang Mai University campus parking lot. Four scenarios were modeled: traditional parking (S0), capacity expansion (S1), LED status signs (S2), and a reservation system (S3). Results show that S2 (LED signs) reduced emissions by 13.1% compared to baseline, while S1 increased emissions by 8.5% despite achieving the highest success rate (90%). Weighted evaluation ranked S2 highest for sustainability trade-offs.</p>
+            </div>
+            <div class="research-pub-link-wrap">
+              <a href="https://ieeexplore.ieee.org/abstract/document/11460092" target="_blank" rel="noopener noreferrer" class="research-pub-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read Full Article</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. InCIT — 2025/11/12 VR Earthquake -->
+        <article class="research-pub-item">
+          <div class="research-pub-main">
+            <div class="research-pub-date-badge"><i class="fa-regular fa-calendar"></i> 12 Nov 2025</div>
+            <h3 class="research-pub-title">Virtual Reality-Based Simulation for Earthquake Survival Training in Buildings</h3>
+            <div class="research-pub-authors">
+              <span><i class="fa-solid fa-user"></i> Thepparit Sinthamrongruk</span>
+              <span><i class="fa-solid fa-user"></i> Khongthat Thongphun</span>
+              <span><i class="fa-solid fa-user"></i> Chiawat Palee</span>
+              <span><i class="fa-solid fa-user"></i> Tachanat Akarajaka</span>
+            </div>
+            <div class="research-pub-meta">
+              <span class="research-pub-venue"><i class="fa-solid fa-users"></i> 2025 9th International Conference on Information Technology (InCIT), pp. 302&ndash;306</span>
+            </div>
+            <div class="research-pub-abstract-box">
+              <p class="research-pub-abstract">This study develops an earthquake simulation program using Virtual Reality (VR) technology to enhance users' knowledge and survival skills. A pilot study with 20 participants showed that the VR group achieved a 90% survival rate compared to 60% in the manual-learning group, with over 30% less head damage. These findings demonstrate that VR training enhances practical learning, reduces anxiety, builds confidence, and supports effective decision-making in emergencies.</p>
+            </div>
+            <div class="research-pub-link-wrap">
+              <a href="https://ieeexplore.ieee.org/document/11276128" target="_blank" rel="noopener noreferrer" class="research-pub-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read Full Article</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. SKIMA — 2025 Pill Dispenser -->
+        <article class="research-pub-item">
+          <div class="research-pub-main">
+            <div class="research-pub-date-badge"><i class="fa-regular fa-calendar"></i> 2025 SKIMA</div>
+            <h3 class="research-pub-title">Development of an Automated Pill Dispenser Utilizing Image Processing</h3>
+            <div class="research-pub-authors">
+              <span><i class="fa-solid fa-user"></i> T. Sinthamrongruk</span>
+              <span><i class="fa-solid fa-user"></i> W. Wongkum</span>
+              <span><i class="fa-solid fa-user"></i> T. Vudhironarit</span>
+            </div>
+            <div class="research-pub-meta">
+              <span class="research-pub-venue"><i class="fa-solid fa-users"></i> 2025 SKIMA, Paisley, United Kingdom, pp. 1&ndash;6</span>
+            </div>
+            <div class="research-pub-abstract-box">
+              <p class="research-pub-abstract">This paper presents an automated pill dispensing system leveraging image processing and AI for accurate pill detection and classification. A custom dataset &mdash; the Thailand Medicine Packaging Dataset &mdash; was developed, comprising 1,020 annotated images representing blister packs, strip packages, and alu-alu packaging. The dataset was utilized to train a YOLOv11-based deep convolutional neural network for pill localization within the packaging, classifying each cell as Full or Empty.</p>
+            </div>
+            <div class="research-pub-link-wrap">
+              <a href="https://ieeexplore.ieee.org/document/11210807" target="_blank" rel="noopener noreferrer" class="research-pub-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read Full Article</a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.research-pub-list -->
+    </div><!-- /.research-modal-panel -->
+  </div><!-- /#research-modal-overlay -->
+
+  <script>
+    /* ---- Research Modal Logic ---- */
+    function openResearchModal() {
+      var overlay = document.getElementById('research-modal-overlay');
+      overlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      // Focus management
+      setTimeout(function() {
+        var closeBtn = document.getElementById('research-modal-close');
+        if (closeBtn) closeBtn.focus();
+      }, 100);
+    }
+
+    function closeResearchModal() {
+      var overlay = document.getElementById('research-modal-overlay');
+      overlay.classList.remove('is-open');
+      document.body.style.overflow = '';
+      // Return focus to card
+      var card = document.getElementById('card-thepparit');
+      if (card) card.focus();
+    }
+
+    function handleModalOverlayClick(e) {
+      // Close only if clicking directly on the overlay backdrop (not the panel)
+      if (e.target === document.getElementById('research-modal-overlay')) {
+        closeResearchModal();
+      }
+    }
+
+    // ESC key to close
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        var overlay = document.getElementById('research-modal-overlay');
+        if (overlay && overlay.classList.contains('is-open')) {
+          closeResearchModal();
+        }
+      }
+    });
+  </script>
+
 </body>
 
 </html>
