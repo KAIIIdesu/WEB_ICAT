@@ -2715,6 +2715,12 @@ body {
   .hero-video-section {
     height: 70vh; /* Prevents hero banner from taking up too much vertical space on short screens */
   }
+  .research-modal-panel {
+    max-height: 85vh;
+  }
+  .research-modal-header {
+    padding: 1.25rem 3rem 1rem 2rem;
+  }
 }
 
 /* Tablet Landscape and Small Desktop Viewport (<= 1024px, like iPad Air Landscape) */
@@ -2755,6 +2761,32 @@ body {
     max-width: 600px;
     padding: 2rem;
     margin: 0 auto;
+  }
+
+  /* Research Modal Tablet Landscape Adjustments */
+  .research-modal-panel {
+    max-width: 88%;
+  }
+
+  .research-pub-main {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .research-pub-authors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem 1.5rem;
+  }
+
+  .research-pub-venue {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .research-pub-link-wrap {
+    justify-content: flex-start;
   }
 }
 
@@ -2969,7 +3001,7 @@ body {
 
 .research-modal-panel {
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
   max-height: 90vh;
   background: #ffffff;
   border-radius: 16px;
@@ -3141,23 +3173,23 @@ body {
 
 .research-pub-authors {
   display: grid;
-  grid-template-rows: repeat(3, auto);
-  grid-auto-flow: column;
-  justify-content: center;
-  align-items: start;
-  gap: 0.35rem 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.6rem 2.5rem;
   font-size: 0.85rem;
   font-weight: 700;
   color: #111827;
-  margin: 0 0 1rem 0;
+  margin: 0 auto 1rem auto;
   line-height: 1.4;
+  max-width: 960px;
+  width: 100%;
 }
 
 .research-pub-authors span {
-  display: flex;
-  align-items: flex-start;
+  display: inline-flex;
+  align-items: center;
   gap: 0.4rem;
   text-align: left;
+  white-space: nowrap;
 }
 
 .research-pub-authors i { color: #0f3c5f; margin-top: 0.2rem; font-size: 0.75rem; }
@@ -3181,7 +3213,7 @@ body {
   border: none;
   padding: 0;
   margin: 0 auto 1rem auto;
-  max-width: 750px;
+  max-width: 850px;
 }
 
 .research-pub-abstract {
@@ -3226,40 +3258,88 @@ body {
 /* Responsive Layout for Modal */
 /* Tablet Portrait Viewport (<= 991px) */
 @media (max-width: 991px) {
-  .research-modal-panel { max-width: 92%; }
+  .research-modal-overlay { padding: 1.5rem; }
+  .research-modal-panel { max-width: 90%; }
   .research-modal-header { padding: 1.5rem 2.5rem 1rem 2rem; }
   .research-pub-item { padding: 1.25rem 1.75rem; }
+
+  .research-pub-main {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .research-pub-authors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem 1.5rem;
+  }
+
+  .research-pub-venue {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .research-pub-link-wrap {
+    justify-content: flex-start;
+  }
 }
 
 /* Mobile Devices (<= 768px) */
 @media (max-width: 768px) {
   .research-modal-overlay { padding: 1.5rem; }
-  .research-modal-panel { max-width: 100%; border-radius: 12px; }
-  .research-modal-header { padding: 1.25rem 2rem 0.85rem 1.5rem; }
+  .research-modal-panel { max-width: 100%; max-height: 94vh; border-radius: 12px; }
+  .research-modal-header { padding: 1.25rem 4.5rem 0.85rem 1.5rem; }
+  .research-modal-header-center { text-align: left; }
   .research-modal-title { font-size: 1.35rem; }
   .research-pub-title { font-size: 1.1rem; }
   .research-pub-item { padding: 1.25rem 1.5rem; }
   
-  /* Restructure author grid for mobile */
+  .research-pub-main {
+    align-items: flex-start;
+    text-align: left;
+  }
+  
   .research-pub-authors {
-    grid-template-rows: auto;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: row;
-    gap: 0.35rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem 0;
+    width: 100%;
+  }
+
+  .research-pub-venue {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .research-pub-link-wrap {
+    justify-content: flex-start;
   }
 }
 
 /* Small Mobiles (<= 480px) */
 @media (max-width: 480px) {
   .research-modal-overlay { padding: 0.75rem; }
-  .research-modal-header { padding: 1.25rem 1.5rem 0.85rem 1.25rem; }
+  .research-modal-panel { max-height: 95vh; }
+  .research-modal-header { padding: 1rem 4rem 0.75rem 1rem; }
   .research-modal-title { font-size: 1.2rem; }
   .research-pub-title { font-size: 1.05rem; }
   .research-pub-item { padding: 1.15rem 1.15rem; }
   
-  /* Single column author list for very small screens */
+  .research-modal-close {
+    width: 34px;
+    height: 34px;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.95rem;
+  }
+  
   .research-pub-authors {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 0.4rem 0;
+    width: 100%;
   }
 }
