@@ -3181,13 +3181,15 @@ body {
 }
 
 .research-pub-authors {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.6rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem 1.5rem;
   font-size: 0.85rem;
   font-weight: 700;
   color: #111827;
-  margin: 0 auto 1rem auto;
+  margin: 0.5rem auto 1rem auto;
   line-height: 1.4;
   max-width: 960px;
   width: 100%;
@@ -3197,7 +3199,6 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  text-align: left;
   white-space: nowrap;
 }
 
@@ -3272,26 +3273,7 @@ body {
   .research-modal-header { padding: 1.5rem 2.5rem 1rem 2rem; }
   .research-pub-item { padding: 1.25rem 1.75rem; }
 
-  .research-pub-main {
-    align-items: flex-start;
-    text-align: left;
-  }
 
-  .research-pub-authors {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 0.5rem 1.5rem;
-  }
-
-  .research-pub-venue {
-    justify-content: flex-start;
-    text-align: left;
-  }
-
-  .research-pub-link-wrap {
-    justify-content: flex-start;
-  }
 }
 
 /* Mobile Devices (<= 768px) */
@@ -3299,32 +3281,9 @@ body {
   .research-modal-overlay { padding: 1.5rem; }
   .research-modal-panel { max-width: 100%; max-height: 94vh; border-radius: 12px; }
   .research-modal-header { padding: 1.25rem 4.5rem 0.85rem 1.5rem; }
-  .research-modal-header-center { text-align: left; }
   .research-modal-title { font-size: 1.35rem; }
   .research-pub-title { font-size: 1.1rem; }
   .research-pub-item { padding: 1.25rem 1.5rem; }
-  
-  .research-pub-main {
-    align-items: flex-start;
-    text-align: left;
-  }
-  
-  .research-pub-authors {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem 0;
-    width: 100%;
-  }
-
-  .research-pub-venue {
-    justify-content: flex-start;
-    text-align: left;
-  }
-
-  .research-pub-link-wrap {
-    justify-content: flex-start;
-  }
 }
 
 /* Small Mobiles (<= 480px) */
@@ -3344,11 +3303,5 @@ body {
     font-size: 0.95rem;
   }
   
-  .research-pub-authors {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.4rem 0;
-    width: 100%;
-  }
+
 }
