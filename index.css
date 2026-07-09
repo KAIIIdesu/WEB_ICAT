@@ -167,6 +167,100 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 1rem;
 }
 
+.journal-search-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-left: 1px solid var(--border-color);
+  padding-left: 1rem;
+  position: relative;
+  font-family: var(--font-sans);
+}
+
+.search-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--academic-blue);
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.search-toggle-btn:hover {
+  color: var(--text-primary);
+  transform: scale(1.1);
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  padding: 0.2rem 0.6rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 180px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.search-input-wrapper.hidden {
+  width: 0;
+  padding: 0;
+  border-color: transparent;
+  background: transparent;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(10px);
+}
+
+#site-search-input {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 0.78rem;
+  color: var(--text-primary);
+  width: 100%;
+  padding: 0;
+}
+
+#site-search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-clear-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+}
+
+.search-clear-btn:hover {
+  color: var(--text-primary);
+}
+
+/* Page search highlight style */
+.search-highlight {
+  background-color: rgba(255, 235, 59, 0.6) !important;
+  color: #000000 !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
 /* --- Hero Banner (YouTube video loop) --- */
 .hero-video-section {
   position: relative;
@@ -2731,7 +2825,8 @@ body {
 /* Tablet Landscape and Small Desktop Viewport (<= 1024px, like iPad Air Landscape) */
 @media (max-width: 1024px) {
   /* Navigation Bar Space Optimization */
-  .journal-meta-tag {
+  .journal-meta-tag,
+  .journal-search-container {
     display: none !important; /* Hide journal meta tag to avoid navbar overflow */
   }
   

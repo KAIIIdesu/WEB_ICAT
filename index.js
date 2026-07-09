@@ -405,6 +405,22 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(el);
   });
 
+  // Scroll down hint functionality
+  const scrollDownHint = document.querySelector('.scroll-down-hint');
+  if (scrollDownHint) {
+    scrollDownHint.style.cursor = 'pointer';
+    scrollDownHint.addEventListener('click', () => {
+      const targetElement = document.querySelector('.paper-header');
+      if (targetElement) {
+        const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  }
+
   const styleSheet = document.createElement("style");
   styleSheet.innerText = `
     .revealed {

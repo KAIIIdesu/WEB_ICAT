@@ -44,8 +44,16 @@
         <a href="unreal.html" class="nav-item">Unreal Engine</a>
         <a href="staff.html" class="nav-item">Faculty & Staff</a>
       </nav>
-      <div class="journal-meta-tag">
-        <span>ICAT JOURNAL VOL. 26, NO. 1</span>
+      <div class="journal-search-container">
+        <button id="search-toggle-btn" class="search-toggle-btn" aria-label="Open Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <div id="search-input-wrapper" class="search-input-wrapper hidden">
+          <input type="text" id="site-search-input" placeholder="Type to search..." autocomplete="off">
+          <button id="search-clear-btn" class="search-clear-btn" aria-label="Clear Search">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
       </div>
     </div>
   </header>

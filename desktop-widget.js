@@ -90,21 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="icat-icon-label">Turtle Project</span>
           </div>
 
-          <!-- Folder 6: Live Telemetry (Internal view) -->
-          <div class="icat-grid-item folder-item" data-folder="telemetry" data-keywords="live telemetry system monitoring cpu gpu load iot status sensor stats performance">
+          <!-- Folder 6: Facebook (External link) -->
+          <div class="icat-grid-item link-item" data-url="https://www.facebook.com/profile.php?id=61572306429989" data-keywords="facebook page social profile group link contact">
             <div class="icat-icon-wrapper">
-              <i class="fa-solid fa-chart-line telemetry-main-icon"></i>
-              <span class="telemetry-dot"></span>
+              <i class="fa-brands fa-facebook" style="font-size: 2.2rem; color: #1877F2;"></i>
             </div>
-            <span class="icat-icon-label">Live Telemetry</span>
-          </div>
-
-          <!-- Folder 7: Lab Network (Internal view) -->
-          <div class="icat-grid-item folder-item" data-folder="network" data-keywords="lab network directory staff contact email links camt cmu faculty">
-            <div class="icat-icon-wrapper">
-              <i class="fa-solid fa-network-wired network-main-icon"></i>
-            </div>
-            <span class="icat-icon-label">Lab Network</span>
+            <span class="icat-icon-label">Facebook</span>
           </div>
         </div>
 
@@ -652,4 +643,217 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initMobileNav();
+
+  // 10. Global Site Search Bar logic
+  function initSiteSearch() {
+    const searchToggleBtn = document.getElementById('search-toggle-btn');
+    const searchInputWrapper = document.getElementById('search-input-wrapper');
+    const siteSearchInput = document.getElementById('site-search-input');
+    const searchClearBtn = document.getElementById('search-clear-btn');
+
+    if (!searchToggleBtn || !searchInputWrapper || !siteSearchInput || !searchClearBtn) return;
+
+    // Toggle search input
+    searchToggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      searchToggleBtn.style.display = 'none';
+      searchInputWrapper.classList.remove('hidden');
+      siteSearchInput.focus();
+    });
+
+    // Close search input when clicking clear button (X) if input is empty, otherwise clear text
+    searchClearBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (siteSearchInput.value.trim() === '') {
+        closeSearch();
+      } else {
+        siteSearchInput.value = '';
+        performPageSearch('');
+        siteSearchInput.focus();
+      }
+    });
+
+    // Helper to close search bar
+    function closeSearch() {
+      siteSearchInput.value = '';
+      performPageSearch('');
+      searchInputWrapper.classList.add('hidden');
+      searchToggleBtn.style.display = 'flex';
+    }
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!searchInputWrapper.contains(e.target) && e.target !== searchToggleBtn && !searchToggleBtn.contains(e.target)) {
+        if (siteSearchInput.value.trim() === '') {
+          closeSearch();
+        }
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeSearch();
+      }
+    });
+
+    // Handle typing in input
+    let searchDebounceTimeout;
+    siteSearchInput.addEventListener('input', () => {
+      clearTimeout(searchDebounceTimeout);
+      searchDebounceTimeout = setTimeout(() => {
+        performPageSearch(siteSearchInput.value);
+      }, 200);
+    });
+
+    // Handle Enter key to jump to results
+    siteSearchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        clearTimeout(searchDebounceTimeout);
+        performPageSearch(siteSearchInput.value);
+
+        // Scroll to the first highlighted match
+        const firstHighlight = document.querySelector('mark.search-highlight');
+        if (firstHighlight) {
+          const offset = 90;
+          const elementPosition = firstHighlight.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        } else {
+          // Fallback: scroll to first visible matching card
+          const visibleCard = Array.from(document.querySelectorAll('.staff-dir-card, .game-portfolio-card, .project-card'))
+            .find(card => card.style.display !== 'none' && siteSearchInput.value.trim() !== '');
+          if (visibleCard) {
+            const offset = 90;
+            const elementPosition = visibleCard.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
+      }
+    });
+
+    // Page search implementation (filters elements and highlights text nodes)
+    let highlightedNodes = [];
+
+    function performPageSearch(query) {
+      const queryClean = query.toLowerCase().trim();
+
+      // A. Filter lists (cards) on specific pages if they exist
+
+      // 1. Staff directory cards (staff.html)
+      const staffCards = document.querySelectorAll('.staff-dir-card');
+      staffCards.forEach(card => {
+        if (!queryClean || card.textContent.toLowerCase().includes(queryClean)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // 2. Projects & events dossier cards (projects.html, events.html)
+      const portfolioCards = document.querySelectorAll('.game-portfolio-card');
+      portfolioCards.forEach(card => {
+        if (!queryClean || card.textContent.toLowerCase().includes(queryClean)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // 3. Home projects carousel cards (index.html)
+      const projectCards = document.querySelectorAll('.project-card');
+      projectCards.forEach(card => {
+        if (!queryClean || card.textContent.toLowerCase().includes(queryClean)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // B. Highlighting text matches in static text nodes
+      removeHighlights();
+      if (queryClean.length >= 2) {
+        highlightTextInElement(document.querySelector('main.paper-layout') || document.body, queryClean);
+      }
+    }
+
+    function highlightTextInElement(element, query) {
+      if (!element) return;
+      const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+      const textNodes = [];
+      let node;
+      while (node = walker.nextNode()) {
+        const parent = node.parentNode;
+        if (parent) {
+          const tag = parent.tagName.toUpperCase();
+          const skipSelector = 'a, button, .project-card, .game-portfolio-card, .staff-dir-card, .close-details-btn-round, script, style, input, textarea, .journal-search-container, .research-modal-overlay';
+          if (tag !== 'SCRIPT' && tag !== 'STYLE' && tag !== 'INPUT' && tag !== 'TEXTAREA' && tag !== 'BUTTON' && tag !== 'MARK' && !parent.closest(skipSelector)) {
+            textNodes.push(node);
+          }
+        }
+      }
+
+      textNodes.forEach(node => {
+        const text = node.nodeValue;
+        const lowerText = text.toLowerCase();
+        let index = lowerText.indexOf(query);
+        if (index !== -1) {
+          const parent = node.parentNode;
+          if (!parent) return;
+
+          const fragment = document.createDocumentFragment();
+          let lastIdx = 0;
+          while (index !== -1) {
+            // Add prefix text
+            if (index > lastIdx) {
+              fragment.appendChild(document.createTextNode(text.substring(lastIdx, index)));
+            }
+            // Add highlighted text
+            const mark = document.createElement('mark');
+            mark.className = 'search-highlight';
+            mark.textContent = text.substring(index, index + query.length);
+            fragment.appendChild(mark);
+
+            lastIdx = index + query.length;
+            index = lowerText.indexOf(query, lastIdx);
+          }
+          // Add suffix text
+          if (lastIdx < text.length) {
+            fragment.appendChild(document.createTextNode(text.substring(lastIdx)));
+          }
+
+          // Replace text node with our fragment
+          parent.replaceChild(fragment, node);
+          highlightedNodes.push(parent);
+        }
+      });
+    }
+
+    function removeHighlights() {
+      const marks = document.querySelectorAll('mark.search-highlight');
+      marks.forEach(mark => {
+        const parent = mark.parentNode;
+        if (parent) {
+          parent.replaceChild(document.createTextNode(mark.textContent), mark);
+        }
+      });
+      // Normalize parents to merge adjacent text nodes
+      highlightedNodes.forEach(parent => {
+        if (parent) {
+          parent.normalize();
+        }
+      });
+      highlightedNodes = [];
+    }
+  }
+
+  initSiteSearch();
 });
